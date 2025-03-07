@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Lya Helia Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        // JavaScript redirect for common patterns
+        const path = window.location.pathname;
+        
+        if (path.endsWith('.html')) {
+            // Remove .html extension
+            const newPath = path.slice(0, -5);
+            window.location.replace(newPath);
+        } else if (path === '/manifesto.html') {
+            window.location.replace('/manifesto');
+        } else if (path === '/index.html') {
+            window.location.replace('/');
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            line-height: 1.6;
+            color: #333;
+            padding: 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 150px;
+        }
+        h1 {
+            font-family: 'Raleway', sans-serif;
+            margin-bottom: 2rem;
+        }
+        p {
+            margin-bottom: 1.5rem;
+        }
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+        .links {
+            margin-top: 3rem;
+        }
+        .links a {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #000;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .links a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Page Not Found</h1>
+    <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+    <p>Please try one of the links below or go to the <a href="/">homepage</a>.</p>
+    
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/manifesto">Manifesto</a>
+    </div>
+</body>
+</html> 
