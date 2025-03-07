@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 import pillow_heif
 
-def optimize_image(input_path, output_path, max_width=2000):
+def optimize_image(input_path, output_path, max_width=1600):
     if input_path.suffix.lower() == '.heic':
         heif_file = pillow_heif.read_heif(input_path)
         img = Image.frombytes(
@@ -36,17 +36,23 @@ def optimize_image(input_path, output_path, max_width=2000):
 def clean_filename(filename):
     return re.sub(r'[^a-zA-Z0-9-]', '-', filename).lower()
 
-def process_gallery():
+def process_gallery(folder_name=None):
     root_dir = Path(__file__).parent.parent
     gallery_path = root_dir / 'images/gallery'
     series_info = {
         'textures': [],
         'elements': [],
         'emotional-postcards': [],
-        'girl-in-bistro': []
+        'girl-in-bistro': [],
+        'manifesto': []
     }
     
-    for series in series_info.keys():
+    folders_to_process = [folder_name] if folder_name else series_info.keys()
+    
+    for series in folders_to_process:
+        if series not in series_info:
+            series_info[series] = []
+            
         series_path = gallery_path / series
         if not series_path.exists():
             continue
@@ -172,5 +178,11 @@ document.addEventListener('DOMContentLoaded', initGallery);
         f.write(js_content)
 
 if __name__ == '__main__':
-    series_info = process_gallery()
+    import sys
+    
+    folder_name = None
+    if len(sys.argv) > 1:
+        folder_name = sys.argv[1]
+        
+    series_info = process_gallery(folder_name)
     update_gallery_js(series_info) 
