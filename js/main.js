@@ -5,15 +5,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            const navHeight = nav.offsetHeight;
             
-            window.scrollTo({
-                top: targetSection.offsetTop - navHeight,
-                behavior: 'smooth'
-            });
+            // Only prevent default and do smooth scrolling for same-page links
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    const navHeight = nav.offsetHeight;
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - navHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            } 
+            // Handle links with hash but not at the beginning (like "/#home")
+            else if (targetId.includes('#') && !targetId.startsWith('/manifesto')) {
+                // Only handle index.html page links that contain #
+                // For other pages like /manifesto, let the browser navigate normally
+                e.preventDefault();
+                
+                // Extract the hash part
+                const hashPart = targetId.substring(targetId.indexOf('#'));
+                const targetSection = document.querySelector(hashPart);
+                
+                if (targetSection) {
+                    const navHeight = nav.offsetHeight;
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - navHeight,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // If section not found, navigate normally
+                    window.location.href = targetId;
+                }
+            }
+            // For all other links (like "/manifesto"), do the default navigation
         });
     });
 
