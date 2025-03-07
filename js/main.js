@@ -4,45 +4,39 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastScrollTop = 0;
 
     navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const targetId = link.getAttribute('href');
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
             
-            // Only prevent default and do smooth scrolling for same-page links
-            if (targetId.startsWith('#')) {
+            // Only handle same-page links (starting with #)
+            if (href.startsWith('#')) {
                 e.preventDefault();
-                const targetSection = document.querySelector(targetId);
+                const targetSection = document.querySelector(href);
                 if (targetSection) {
                     const navHeight = nav.offsetHeight;
-                    
                     window.scrollTo({
                         top: targetSection.offsetTop - navHeight,
                         behavior: 'smooth'
                     });
                 }
-            } 
-            // Handle links with hash but not at the beginning (like "/#home")
-            else if (targetId.includes('#') && !targetId.startsWith('/manifesto')) {
-                // Only handle index.html page links that contain #
-                // For other pages like /manifesto, let the browser navigate normally
+            }
+            // Special case for links like "/#section" - only from index page to index page
+            else if (href.startsWith('/#') && window.location.pathname === '/' || window.location.pathname === '/index.html') {
                 e.preventDefault();
-                
-                // Extract the hash part
-                const hashPart = targetId.substring(targetId.indexOf('#'));
+                const hashPart = href.substring(href.indexOf('#'));
                 const targetSection = document.querySelector(hashPart);
-                
                 if (targetSection) {
                     const navHeight = nav.offsetHeight;
-                    
                     window.scrollTo({
                         top: targetSection.offsetTop - navHeight,
                         behavior: 'smooth'
                     });
                 } else {
-                    // If section not found, navigate normally
-                    window.location.href = targetId;
+                    // If target not found, follow the link normally
+                    window.location.href = href;
                 }
             }
-            // For all other links (like "/manifesto"), do the default navigation
+            // All other links (like "/manifesto") - let browser handle normally
+            // No preventDefault() means normal navigation occurs
         });
     });
 
