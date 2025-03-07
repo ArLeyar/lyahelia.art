@@ -38,6 +38,117 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     
+    <!-- Additional styles for responsive navigation -->
+    <style>
+        .hamburger-menu {
+            display: none; /* Hide by default on desktop */
+        }
+        
+        /* Main navigation styling */
+        .main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .main-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        .main-nav li {
+            margin: 0 1rem;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .main-nav a:hover {
+            color: #000;
+        }
+        
+        /* Add space for the fixed navbar */
+        body {
+            padding-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block; /* Show on mobile */
+                cursor: pointer;
+                padding: 15px;
+                z-index: 100;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+            
+            .hamburger-menu span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: #333;
+                margin-bottom: 5px;
+                transition: all 0.3s ease;
+            }
+            
+            .main-nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 60px 0 20px;
+                background-color: white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 90;
+            }
+            
+            .main-nav.active ul {
+                display: flex;
+            }
+            
+            .main-nav li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+            
+            .main-nav a {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+                display: block;
+            }
+            
+            .hamburger-menu.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .hamburger-menu.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger-menu.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-nav a {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+    
     <!-- Favicon -->
     <link rel="icon" href="images/favicons/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
@@ -47,6 +158,11 @@
 </head>
 <body>
     <nav class="main-nav">
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#gallery">Gallery</a></li>
@@ -145,6 +261,7 @@
         <div class="contact-info">
             <p>Email: <a href="mailto:lyahelia317@gmail.com">lyahelia317@gmail.com</a></p>
             <p>Phone: <a href="tel:+6281337984291">+62 81337984291</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/lya.helia/" target="_blank">@lya.helia</a></p>
         </div>
     </section>
 
@@ -155,5 +272,26 @@
 
     <script src="js/gallery.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const nav = document.querySelector('.main-nav');
+            
+            hamburger.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.main-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html> 

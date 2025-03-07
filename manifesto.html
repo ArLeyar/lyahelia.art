@@ -72,7 +72,6 @@
         }
         
         .manifesto-intro {
-            font-style: italic;
             margin-bottom: 3rem;
             text-align: center;
         }
@@ -83,14 +82,25 @@
             margin-bottom: 1rem;
         }
         
-        .manifesto-image-container {
-            display: flex;
-            justify-content: center;
+        .manifesto-image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
             margin: 4rem 0;
         }
         
+        .manifesto-image-main {
+            grid-column: 1 / -1;
+            margin-bottom: 1.5rem;
+        }
+        
+        .manifesto-image-full {
+            grid-column: 1 / -1;
+            margin-top: 1.5rem;
+        }
+        
         .manifesto-image {
-            width: 60%;
+            width: 100%;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
@@ -99,15 +109,130 @@
             transform: scale(1.02);
         }
         
+        .hamburger-menu {
+            display: none; /* Hide by default on desktop */
+        }
+        
+        /* Main navigation styling */
+        .main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .main-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        .main-nav li {
+            margin: 0 1rem;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .main-nav a:hover {
+            color: #000;
+        }
+        
+        /* Add space for the fixed navbar */
+        body {
+            padding-top: 60px;
+        }
+        
         @media (max-width: 768px) {
-            .manifesto-image {
-                width: 90%;
+            .manifesto-section {
+                padding: 3rem 1rem;
+            }
+            
+            .hamburger-menu {
+                display: block; /* Show on mobile */
+                cursor: pointer;
+                padding: 15px;
+                z-index: 100;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+            
+            .hamburger-menu span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: #333;
+                margin-bottom: 5px;
+                transition: all 0.3s ease;
+            }
+            
+            .main-nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 60px 0 20px;
+                background-color: white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 90;
+            }
+            
+            .main-nav.active ul {
+                display: flex;
+            }
+            
+            .main-nav li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+            
+            .main-nav a {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+                display: block;
+            }
+            
+            .hamburger-menu.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .hamburger-menu.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger-menu.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .manifesto-image-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-nav a {
+                font-size: 0.85rem;
             }
         }
     </style>
 </head>
 <body>
     <nav class="main-nav">
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul>
             <li><a href="/#home">Home</a></li>
             <li><a href="/#gallery">Gallery</a></li>
@@ -131,19 +256,11 @@
             <p>Contrary to the standard perception of Hedonism, often deemed synonymous with vulgar debauchery, I endow Hedonism of this era with new, majestic qualities. Without them, it would merely be another ignorant whim of humanity.</p>
         </div>
         
-        <div class="manifesto-image-container">
-            <img src="images/gallery/manifesto/manifesto-1.jpg" alt="Manifesto on Hedonism - Part 1" class="manifesto-image" onclick="openLightbox(this.src)">
-        </div>
-        
         <div class="manifesto-chapter">
             <p class="manifesto-letter">I</p>
             <h3>Moderation</h3>
             <p>Living amidst an abundance of available pleasures, it's easy to get a sunstroke. Yet, by favouring rational Moderation, the doors to a deeper and more enriched perception of life old open up:</p>
             <p>Moderation is the ability to maintain a balance between the internal and external, the white and black, and any other dualities at the moment of decision-making.</p>
-        </div>
-        
-        <div class="manifesto-image-container">
-            <img src="images/gallery/manifesto/manifesto-2.jpg" alt="Manifesto on Hedonism - Part 2" class="manifesto-image" onclick="openLightbox(this.src)">
         </div>
         
         <div class="manifesto-chapter">
@@ -154,19 +271,11 @@
             <p>Appropriateness is the ability to make decisions by finding a balance between personal needs, resources, and the needs of those around.</p>
         </div>
         
-        <div class="manifesto-image-container">
-            <img src="images/gallery/manifesto/manifesto-3.jpg" alt="Manifesto on Hedonism - Part 3" class="manifesto-image" onclick="openLightbox(this.src)">
-        </div>
-        
         <div class="manifesto-chapter">
             <p class="manifesto-letter">III</p>
             <h3>Attention</h3>
             <p>Vivid, profound attention to the moment, to oneself, and to the surrounding world — to every detail woven into the fabric of our existence — is a true art. In the hedonistic understanding, Attention is not just an act of observation, but an active process in which we choose which aspect of our endlessly rich experience to embrace and enrich. Attention is the bridge between the external world of pleasures and the internal world of experiences. Only through Attention does pleasure transform from raw material into a refined dish for the soul.</p>
             <p>Attention is a call to action, an invitation to discover the world in all its diversity and richness, to cherish every moment, and to find in this process deep and lasting satisfaction.</p>
-        </div>
-        
-        <div class="manifesto-image-container">
-            <img src="images/gallery/manifesto/manifesto-4.jpg" alt="Manifesto on Hedonism - Part 4" class="manifesto-image" onclick="openLightbox(this.src)">
         </div>
         
         <div class="manifesto-chapter">
@@ -211,6 +320,25 @@
             <p>In conclusion, Hedonism serves as a tool for returning to the Assemblage Point or maintaining it. From this point, true Creation begins, multiplying goodness in the world. Here, we encounter Labor, Diligence, Constancy — tools thanks to which Homo has evolved into Sapiens, or the crown of creation. (Although, perhaps, it's all about the protein).</p>
             <p>Conscious Hedonism teaches us to listen to the thin voice of the soul. Creation confirms the soul's intentions in the material world.</p>
         </div>
+        
+        <div class="manifesto-image-grid">
+            <div class="manifesto-image-main">
+                <img src="images/gallery/manifesto/manifesto-1.jpg" alt="Manifesto on Hedonism - Main" class="manifesto-image" onclick="openLightbox(this.src)">
+            </div>
+            <div>
+                <img src="images/gallery/manifesto/manifesto-2.jpg" alt="Manifesto on Hedonism - Detail 1" class="manifesto-image" onclick="openLightbox(this.src)">
+            </div>
+            <div>
+                <img src="images/gallery/manifesto/manifesto-3.jpg" alt="Manifesto on Hedonism - Detail 2" class="manifesto-image" onclick="openLightbox(this.src)">
+            </div>
+            <div class="manifesto-image-full">
+                <img src="images/gallery/manifesto/manifesto-4.jpg" alt="Manifesto on Hedonism - Detail 3" class="manifesto-image" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+        
+        <div class="instagram-link" style="text-align: center; margin-top: 3rem; margin-bottom: 2rem;">
+            <p>Follow on Instagram: <a href="https://www.instagram.com/lya.helia/" target="_blank" style="text-decoration: none; font-weight: 600; color: #333; transition: color 0.3s ease;">@lya.helia</a></p>
+        </div>
     </div>
 
     <div id="lightbox" class="lightbox">
@@ -245,6 +373,26 @@
             if (e.target === document.getElementById('lightbox')) {
                 closeLightbox();
             }
+        });
+        
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const nav = document.querySelector('.main-nav');
+            
+            hamburger.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.main-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
         });
     </script>
 </body>
