@@ -1,7 +1,7 @@
 const galleryData = {
     textures: {
         title: "Textures",
-        period: "2023-2024",
+        period: "2021-2024",
         images: [
             {
                 src: "a-feeling-of-freshly-falling-in-love.jpg",
@@ -9,23 +9,23 @@ const galleryData = {
                 year: "2023"
             },
             {
-                src: "textures-2.jpg",
-                title: "Textures 2",
-                year: "2024"
+                src: "a-boy-named-sun.jpg",
+                title: "A Boy Named Sun",
+                year: "2022"
             },
             {
-                src: "textures-3.jpg",
-                title: "Textures 3",
-                year: "2024"
+                src: "healing.jpg",
+                title: "Healing",
+                year: "2022"
             },
             {
-                src: "textures-4.jpg",
-                title: "Textures 4",
-                year: "2024"
+                src: "silver-gates.jpg",
+                title: "Silver Gates",
+                year: "2021"
             },
             {
-                src: "textures-5.jpg",
-                title: "Textures 5",
+                src: "by-the-sea.jpg",
+                title: "By the Sea",
                 year: "2024"
             },
             {

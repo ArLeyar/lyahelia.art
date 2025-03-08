@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageOps
 import os
 import re
 from pathlib import Path
@@ -17,6 +17,8 @@ def optimize_image(input_path, output_path, max_width=1600):
         )
     else:
         img = Image.open(input_path)
+        # Preserve the orientation from EXIF data
+        img = ImageOps.exif_transpose(img)
     
     if img.mode in ('RGBA', 'LA'):
         background = Image.new('RGB', img.size, 'white')
@@ -35,6 +37,39 @@ def optimize_image(input_path, output_path, max_width=1600):
 
 def clean_filename(filename):
     return re.sub(r'[^a-zA-Z0-9-]', '-', filename).lower()
+
+def process_lyahelia():
+    root_dir = Path(__file__).parent.parent
+    lyahelia_dir = root_dir / 'images/lyahelia'
+    
+    if not lyahelia_dir.exists():
+        print(f"Directory not found: {lyahelia_dir}")
+        return
+    
+    # Get all image files and sort them
+    image_files = [f for f in lyahelia_dir.glob('*') if f.suffix.lower() in ('.jpg', '.jpeg', '.png', '.heic', '.JPG')]
+    image_files = sorted(image_files)
+    
+    # Process each image with numeric naming
+    for idx, file in enumerate(image_files, 1):
+        # Skip already processed files
+        if file.stem.startswith('lyahelia-'):
+            continue
+            
+        output_filename = f"lyahelia-{idx}.jpg"
+        output_path = lyahelia_dir / output_filename
+        
+        # Don't overwrite existing files with the same name
+        if output_path.exists():
+            print(f"File already exists: {output_path}")
+            continue
+        
+        try:
+            print(f"Optimizing: {file.name} -> {output_filename}")
+            optimize_image(file, output_path)
+            # Note: originals are kept
+        except Exception as e:
+            print(f"Error processing {file}: {e}")
 
 def process_gallery(folder_name=None):
     root_dir = Path(__file__).parent.parent
@@ -180,9 +215,13 @@ document.addEventListener('DOMContentLoaded', initGallery);
 if __name__ == '__main__':
     import sys
     
-    folder_name = None
-    if len(sys.argv) > 1:
-        folder_name = sys.argv[1]
-        
-    series_info = process_gallery(folder_name)
-    update_gallery_js(series_info) 
+    if len(sys.argv) > 1 and sys.argv[1] == 'lyahelia':
+        print("Processing lyahelia folder...")
+        process_lyahelia()
+    else:
+        folder_name = None
+        if len(sys.argv) > 1:
+            folder_name = sys.argv[1]
+            
+        series_info = process_gallery(folder_name)
+        update_gallery_js(series_info) 

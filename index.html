@@ -82,6 +82,31 @@
             padding-top: 60px;
         }
         
+        /* Artist images styling */
+        .artist-images {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            margin-bottom: 5rem;
+            margin-top: 2rem;
+        }
+        
+        .artist-portrait {
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            display: block;
+        }
+        
+        .artist-portrait-padded {
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 30%;
+            box-sizing: content-box;
+        }
+        
         @media (max-width: 768px) {
             .hamburger-menu {
                 display: block; /* Show on mobile */
@@ -140,6 +165,10 @@
             .hamburger-menu.active span:nth-child(3) {
                 transform: rotate(-45deg) translate(7px, -7px);
             }
+            
+            .artist-images {
+                padding: 0 1rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -179,6 +208,11 @@
     <section id="home" class="home">
         <h1 class="artist-name">Lya Helia</h1>
     </section>
+
+    <div class="artist-images">
+        <img src="images/lyahelia/lyahelia-2.jpg" alt="Lya Helia artwork" class="artist-portrait">
+        <!--img src="images/lyahelia/lyahelia-1.jpg" alt="Lya Helia portrait" class="artist-portrait artist-portrait-padded"!-->
+    </div>
 
     <section id="gallery" class="gallery">
         <h2>Gallery</h2>
@@ -259,9 +293,9 @@
     <section id="contacts" class="contacts">
         <h2>Contacts</h2>
         <div class="contact-info">
-            <p>Email: <a href="mailto:lyahelia317@gmail.com">lyahelia317@gmail.com</a></p>
-            <p>Phone: <a href="tel:+6281337984291">+62 81337984291</a></p>
-            <p>Instagram: <a href="https://www.instagram.com/lya.helia/" target="_blank">@lya.helia</a></p>
+            <p>email: <a href="mailto:lyahelia317@gmail.com">lyahelia317@gmail.com</a></p>
+            <p>phone: <a href="tel:+6281337984291">+62 81337984291</a></p>
+            <p>instagram: <a href="https://www.instagram.com/lya.helia/" target="_blank">@lya.helia</a></p>
         </div>
     </section>
 
