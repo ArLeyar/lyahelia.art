@@ -177,6 +177,17 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
 }
 
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-link svg {
+    flex-shrink: 0;
+    color: var(--text-color);
+}
+
 @media (max-width: 768px) {
     .hamburger-menu {
         display: block;
