@@ -66,36 +66,10 @@
     <section class="page-content">
         <h1>Shop</h1>
         <div class="shop-content">
-            <p>Original works available for purchase. Selected pieces also offered as prints on museum-quality paper. Explore full listings in my online shops on Saatchi Art and Artmajeur.</p>
-            
-            <ul class="pdf-links">
-                <li><a href="https://www.saatchiart.com/en-id/lyahelia" target="_blank" class="pdf-link">Saatchi Art</a></li>
-                <li><a href="https://www.artmajeur.com/lya-helia" target="_blank" class="pdf-link">Artmajeur</a></li>
-            </ul>
+            <p>Original works available for purchase. Selected pieces also offered as prints on museum-quality paper. Explore full listings in my online shops on <a href="https://www.saatchiart.com/en-id/lyahelia" target="_blank" class="inline-link">Saatchi Art</a> and <a href="https://www.artmajeur.com/lya-helia" target="_blank" class="inline-link">Artmajeur</a>.</p>
         </div>
     </section>
 
     <script src="../js/main.js"></script>
-    <script>
-        // Hamburger menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger-menu');
-            const nav = document.querySelector('.main-nav');
-            
-            hamburger.addEventListener('click', function() {
-                nav.classList.toggle('active');
-                hamburger.classList.toggle('active');
-            });
-            
-            // Close menu when clicking on a link
-            const navLinks = document.querySelectorAll('.main-nav a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    nav.classList.remove('active');
-                    hamburger.classList.remove('active');
-                });
-            });
-        });
-    </script>
 </body>
 </html> 
