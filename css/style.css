@@ -188,6 +188,53 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-color);
 }
 
+/* Press page styles */
+.press-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.press-item {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.press-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.press-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.press-caption {
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.press-caption h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.press-caption p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
 @media (max-width: 768px) {
     .hamburger-menu {
         display: block;
@@ -268,6 +315,15 @@ h1, h2, h3, h4, h5, h6 {
 
     .pdf-links {
         text-align: left;
+    }
+
+    .press-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .press-caption {
+        padding: 1rem;
     }
 }
 
