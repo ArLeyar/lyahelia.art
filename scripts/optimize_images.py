@@ -38,6 +38,42 @@ def optimize_image(input_path, output_path, max_width=1600):
 def clean_filename(filename):
     return re.sub(r'[^a-zA-Z0-9-]', '-', filename).lower()
 
+def process_portfolio():
+    """Process portfolio images while preserving original filenames"""
+    root_dir = Path(__file__).parent.parent
+    portfolio_dir = root_dir / 'images/portfolio'
+    
+    if not portfolio_dir.exists():
+        print(f"Directory not found: {portfolio_dir}")
+        return
+    
+    # Get all subdirectories in portfolio
+    subdirs = [d for d in portfolio_dir.iterdir() if d.is_dir()]
+    
+    for subdir in subdirs:
+        print(f"\nProcessing folder: {subdir.name}")
+        
+        # Get all image files in this subdirectory
+        image_files = [f for f in subdir.glob('*') if f.suffix.lower() in ('.jpg', '.jpeg', '.png', '.heic', '.JPG')]
+        
+        for file in image_files:
+            # Create a temporary optimized file
+            temp_output = file.with_suffix('.tmp.jpg')
+            
+            try:
+                print(f"  Optimizing: {file.name}")
+                optimize_image(file, temp_output)
+                
+                # Replace original with optimized version
+                file.unlink()  # Remove original
+                temp_output.rename(file.with_suffix('.jpg'))  # Rename temp to original name (with .jpg extension)
+                
+            except Exception as e:
+                print(f"  Error processing {file}: {e}")
+                # Clean up temp file if it exists
+                if temp_output.exists():
+                    temp_output.unlink()
+
 def process_lyahelia():
     root_dir = Path(__file__).parent.parent
     lyahelia_dir = root_dir / 'images/lyahelia'
@@ -215,7 +251,10 @@ document.addEventListener('DOMContentLoaded', initGallery);
 if __name__ == '__main__':
     import sys
     
-    if len(sys.argv) > 1 and sys.argv[1] == 'lyahelia':
+    if len(sys.argv) > 1 and sys.argv[1] == 'portfolio':
+        print("Processing portfolio folder...")
+        process_portfolio()
+    elif len(sys.argv) > 1 and sys.argv[1] == 'lyahelia':
         print("Processing lyahelia folder...")
         process_lyahelia()
     else:
