@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Symbolic Landscapes - Lya Helia - Abstract Artist based in Bali, exploring the dynamic changes of our time through painting and digital art.">
+    <title>Symbolic Landscapes - Lya Helia - Abstract Artist</title>
+
+    <!-- Essential Meta Tags -->
+    <meta property="og:site_name" content="Lya Helia Art">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lyahelia.art/pages/portfolio/symbolic-landscapes.html">
+    <meta property="og:title" content="Symbolic Landscapes - Lya Helia - Abstract Artist">
+    <meta property="og:description" content="Explore the Symbolic Landscapes series by Bali-based abstract artist Lya Helia.">
+    
+    <!-- Primary Image -->
+    <meta property="og:image" content="https://lyahelia.art/images/social/preview.jpg">
+    <meta property="og:image:secure_url" content="https://lyahelia.art/images/social/preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Abstract art by Lya Helia featuring dynamic orange textures">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lyahelia">
+    <meta name="twitter:creator" content="@lyahelia">
+    <meta name="twitter:title" content="Symbolic Landscapes - Lya Helia - Abstract Artist">
+    <meta name="twitter:description" content="Explore the Symbolic Landscapes series by Bali-based abstract artist Lya Helia.">
+    <meta name="twitter:image" content="https://lyahelia.art/images/social/preview.jpg">
+    <meta name="twitter:image:alt" content="Abstract art by Lya Helia featuring dynamic orange textures">
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="Lya Helia">
+    <meta name="keywords" content="symbolic landscapes, abstract art, artist, Bali, contemporary art, painting, digital art, Lya Helia">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../images/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="../../site.webmanifest">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../portfolio.html">Portfolio</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../press.html">Press</a></li>
+            <li><a href="../shop.html">Shop</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-content">
+        <h1>Symbolic Landscapes</h1>
+        <div class="portfolio-back">
+            <a href="../portfolio.html">&larr; Back to Portfolio</a>
+        </div>
+        
+        <div class="portfolio-description">
+            <p>Symbolic Landscapes (2022) is a series of analog collages made from fragments of bodies, architecture, and natural elements. The works explore spatial relationships between organic and built environments. The focus is on form and rhythm, with an intention to convey the meaning behind the names of natural places—mountains, rivers—through composition, contrast, and the interplay of shapes.</p>
+        </div>
+
+        <div class="portfolio-gallery">
+            <!-- Single column layout for 3 images -->
+            <div class="featured-image">
+                <img src="../../images/portfolio/2. symbolic landscapes (2022)/1. welcoming (beşbarmaq).jpg" alt="Symbolic Landscapes - Welcoming (Beşbarmaq)" class="gallery-image" data-title="Symbolic Landscapes - Welcoming (Beşbarmaq)">
+            </div>
+            
+            <div class="featured-image">
+                <img src="../../images/portfolio/2. symbolic landscapes (2022)/2. feels like summer (batabat).jpg" alt="Symbolic Landscapes - Feels Like Summer (Batabat)" class="gallery-image" data-title="Symbolic Landscapes - Feels Like Summer (Batabat)">
+            </div>
+
+            <div class="featured-image">
+                <img src="../../images/portfolio/2. symbolic landscapes (2022)/3. and all that jazz (bakuvian night).jpg" alt="Symbolic Landscapes - And All That Jazz (Bakuvian Night)" class="gallery-image" data-title="Symbolic Landscapes - And All That Jazz (Bakuvian Night)">
+            </div>
+        </div>
+
+        <!-- Lightbox for image viewing -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </section>
+
+    <script src="../../js/main.js"></script>
+    <script>
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const nav = document.querySelector('.main-nav');
+            
+            hamburger.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.main-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

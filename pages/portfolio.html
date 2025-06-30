@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio - Lya Helia - Abstract Artist based in Bali, exploring the dynamic changes of our time through painting and digital art.">
+    <title>Portfolio - Lya Helia - Abstract Artist</title>
+
+    <!-- Essential Meta Tags -->
+    <meta property="og:site_name" content="Lya Helia Art">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lyahelia.art/portfolio.html">
+    <meta property="og:title" content="Portfolio - Lya Helia - Abstract Artist">
+    <meta property="og:description" content="View the portfolio of Bali-based abstract artist Lya Helia.">
+    
+    <!-- Primary Image -->
+    <meta property="og:image" content="https://lyahelia.art/images/social/preview.jpg">
+    <meta property="og:image:secure_url" content="https://lyahelia.art/images/social/preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Abstract art by Lya Helia featuring dynamic orange textures">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lyahelia">
+    <meta name="twitter:creator" content="@lyahelia">
+    <meta name="twitter:title" content="Portfolio - Lya Helia - Abstract Artist">
+    <meta name="twitter:description" content="View the portfolio of Bali-based abstract artist Lya Helia.">
+    <meta name="twitter:image" content="https://lyahelia.art/images/social/preview.jpg">
+    <meta name="twitter:image:alt" content="Abstract art by Lya Helia featuring dynamic orange textures">
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="Lya Helia">
+    <meta name="keywords" content="portfolio, abstract art, artist, Bali, contemporary art, painting, digital art, Lya Helia">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    
+
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="press.html">Press</a></li>
+            <li><a href="shop.html">Shop</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-content">
+        <h1>Portfolio</h1>
+        
+        <div class="portfolio-grid">
+            <a href="portfolio/emotional-postcards.html" class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="../images/portfolio/1. emotional postcards (2022)/1.jpg" alt="Emotional Postcards cover">
+                </div>
+                <div class="portfolio-caption">
+                    <h3>Emotional Postcards</h3>
+                </div>
+            </a>
+            
+            <a href="portfolio/symbolic-landscapes.html" class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="../images/portfolio/2. symbolic landscapes (2022)/1. welcoming (beşbarmaq).jpg" alt="Symbolic Landscapes cover">
+                </div>
+                <div class="portfolio-caption">
+                    <h3>Symbolic Landscapes</h3>
+                </div>
+            </a>
+            
+            <a href="portfolio/textures.html" class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="../images/portfolio/3. textures (2022-2025)/1. emotional landscapes (2022).jpg" alt="Textures cover">
+                </div>
+                <div class="portfolio-caption">
+                    <h3>Textures</h3>
+                </div>
+            </a>
+            
+            <a href="portfolio/etherlands.html" class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="../images/portfolio/4. etherlands (2023-2025)/anomaly i (2024).jpg" alt="Etherlands cover">
+                </div>
+                <div class="portfolio-caption">
+                    <h3>Etherlands</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const nav = document.querySelector('.main-nav');
+            
+            hamburger.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.main-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Lya Helia - Abstract Artist based in Bali, exploring the dynamic changes of our time through painting and digital art.">
+    <title>About - Lya Helia - Abstract Artist</title>
+
+    <!-- Essential Meta Tags -->
+    <meta property="og:site_name" content="Lya Helia Art">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lyahelia.art/about.html">
+    <meta property="og:title" content="About - Lya Helia - Abstract Artist">
+    <meta property="og:description" content="Learn about Bali-based abstract artist Lya Helia and her artistic journey.">
+    
+    <!-- Primary Image -->
+    <meta property="og:image" content="https://lyahelia.art/images/social/preview.jpg">
+    <meta property="og:image:secure_url" content="https://lyahelia.art/images/social/preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Abstract art by Lya Helia featuring dynamic orange textures">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lyahelia">
+    <meta name="twitter:creator" content="@lyahelia">
+    <meta name="twitter:title" content="About - Lya Helia - Abstract Artist">
+    <meta name="twitter:description" content="Learn about Bali-based abstract artist Lya Helia and her artistic journey.">
+    <meta name="twitter:image" content="https://lyahelia.art/images/social/preview.jpg">
+    <meta name="twitter:image:alt" content="Abstract art by Lya Helia featuring dynamic orange textures">
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="Lya Helia">
+    <meta name="keywords" content="about, abstract art, artist, Bali, contemporary art, painting, digital art, Lya Helia">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    
+
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="press.html">Press</a></li>
+            <li><a href="shop.html">Shop</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-content">
+        <h1>About</h1>
+        <div class="about-container">
+            <div class="about-photo">
+                <img src="../images/about/about.jpeg" alt="Lya Helia - Artist" class="artist-portrait">
+            </div>
+            <div class="about-text">
+                <p>Lya Helia is an Azerbaijani artist based in Bali, Indonesia. Working with watercolor, ink, acrylic, and mixed media, she explores how unseen psychological patterns and perceptual mechanisms shape individual and collective experience. Through abstract forms and finely attuned color relationships, she constructs environments that reflect shifts in cognition, consciousness, and internal architecture. Her layered process invites viewers to engage with the intangible—mapping invisible infrastructures through sensation, rhythm, and spatial logic.</p>
+                
+                <p>Held in private collections worldwide, including the Netherlands, US, UK, Turkey, Indonesia, UAE, and Azerbaijan.</p>
+                
+                <ul class="pdf-links">
+                    <li><a href="../files/LH_CV.pdf" target="_blank" class="pdf-link">Full CV</a></li>
+                    <li><a href="../files/LH_portfolio.pdf" target="_blank" class="pdf-link">Portfolio</a></li>
+                    <li><a href="../files/LH_artist_statement.pdf" target="_blank" class="pdf-link">Artist Statement</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const nav = document.querySelector('.main-nav');
+            
+            hamburger.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.main-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

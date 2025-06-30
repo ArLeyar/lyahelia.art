@@ -21,6 +21,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
+    padding-top: 60px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,12 +30,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
 .main-nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 1rem 0;
+    background-color: white;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -43,22 +48,33 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.main-nav li {
+    margin: 0 1rem;
 }
 
 .main-nav a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #333;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-    color: var(--primary-color);
+    color: #000;
 }
 
-section {
+.artist-portrait {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.page-content {
     padding: 5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -71,83 +87,11 @@ section {
     justify-content: center;
 }
 
-.artist-name {
-    font-family: 'Dancing Script', cursive;
-    font-size: 5rem;
-    text-align: center;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 1;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: filter 0.3s ease;
-    cursor: pointer;
-}
-
-.gallery-item:hover img {
-    filter: brightness(0.7);
-}
-
-.statement-content {
-    max-width: 800px;
+.artist-signature {
+    max-width: 400px;
+    height: auto;
+    display: block;
     margin: 0 auto;
-}
-
-.statement-content p {
-    margin-bottom: 1.5rem;
-}
-
-.exhibition-list {
-    list-style: none;
-}
-
-.exhibition-list li {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--medium-gray);
-}
-
-.exhibition-list li:last-child {
-    border-bottom: none;
-}
-
-.year {
-    font-weight: 700;
-    margin-right: 1rem;
-}
-
-.title {
-    font-style: italic;
-}
-
-.project-item {
-    margin-bottom: 2rem;
-    padding: 2rem;
-    background-color: var(--light-gray);
-}
-
-.contact-info {
-    text-align: center;
-}
-
-.contact-info a {
-    color: var(--text-color);
-    text-decoration: none;
-    border-bottom: 1px solid var(--text-color);
 }
 
 .lightbox {
@@ -182,38 +126,344 @@ section {
     cursor: pointer;
 }
 
+/* About page styles */
+.about-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.about-photo {
+    flex: 0 0 40%;
+}
+
+.about-photo .artist-portrait {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.pdf-links {
+    margin-top: 2rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.pdf-links li {
+    margin-bottom: 0.5rem;
+}
+
+.pdf-link {
+    color: var(--text-color);
+    text-decoration: underline;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.pdf-link:hover {
+    color: var(--primary-color);
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-link svg {
+    flex-shrink: 0;
+    color: var(--text-color);
+}
+
+/* Press page styles */
+.press-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.press-item {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.press-item:hover {
+    transform: translateY(-5px);
+}
+
+.press-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.press-caption {
+    text-align: center;
+}
+
+.press-caption h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.press-caption p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Portfolio page styles */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.portfolio-item {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.05);
+}
+
+.portfolio-caption {
+    text-align: center;
+}
+
+.portfolio-caption h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-back {
+    margin-bottom: 2rem;
+}
+
+.portfolio-back a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.portfolio-back a:hover {
+    color: var(--primary-color);
+}
+
+.portfolio-description {
+    margin-top: 2rem;
+}
+
+.portfolio-description p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Portfolio gallery styles */
+.portfolio-gallery {
+    margin-top: 3rem;
+}
+
+.featured-image {
+    margin-bottom: 2rem;
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.featured-image img:hover {
+    opacity: 0.9;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    opacity: 0.9;
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
-    .main-nav {
-        padding: 0.5rem;
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+        z-index: 100;
+        position: absolute;
+        right: 10px;
+        top: 10px;
     }
-
+    
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+    }
+    
     .main-nav ul {
-        flex-wrap: wrap;
-        gap: 1rem;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 60px 0 20px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 90;
+    }
+    
+    .main-nav.active ul {
+        display: flex;
+    }
+    
+    .main-nav li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    
+    .main-nav a {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        display: block;
+    }
+    
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    .artist-name {
-        font-size: 3rem;
+    .artist-signature {
+        max-width: 300px;
     }
 
-    section {
+    .page-content {
         padding: 3rem 1rem;
     }
 
+    .about-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-photo {
+        flex: none;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .pdf-links {
+        text-align: left;
+    }
+
+    .press-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .press-caption {
+        padding: 1rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .featured-image {
+        margin-bottom: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .main-nav ul {
-        flex-direction: column;
-        text-align: center;
+    .main-nav a {
+        font-size: 0.85rem;
     }
 
-    .artist-name {
-        font-size: 2.5rem;
+    .artist-signature {
+        max-width: 250px;
     }
-} 
 } 

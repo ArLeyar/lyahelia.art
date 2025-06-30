@@ -38,146 +38,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- Additional styles for responsive navigation -->
-    <style>
-        .hamburger-menu {
-            display: none; /* Hide by default on desktop */
-        }
-        
-        /* Main navigation styling */
-        .main-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: white;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .main-nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 1rem 0;
-        }
-        
-        .main-nav li {
-            margin: 0 1rem;
-        }
-        
-        .main-nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        
-        .main-nav a:hover {
-            color: #000;
-        }
-        
-        /* Add space for the fixed navbar */
-        body {
-            padding-top: 60px;
-        }
-        
-        /* Artist images styling */
-        .artist-images {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            margin-bottom: 5rem;
-            margin-top: 2rem;
-        }
-        
-        .artist-portrait {
-            width: 100%;
-            height: auto;
-            margin-bottom: 2rem;
-            display: block;
-        }
-        
-        .artist-portrait-padded {
-            width: 40%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 30%;
-            box-sizing: content-box;
-        }
-        
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: block; /* Show on mobile */
-                cursor: pointer;
-                padding: 15px;
-                z-index: 100;
-                position: absolute;
-                right: 10px;
-                top: 10px;
-            }
-            
-            .hamburger-menu span {
-                display: block;
-                width: 25px;
-                height: 3px;
-                background-color: #333;
-                margin-bottom: 5px;
-                transition: all 0.3s ease;
-            }
-            
-            .main-nav ul {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                padding: 60px 0 20px;
-                background-color: white;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 90;
-            }
-            
-            .main-nav.active ul {
-                display: flex;
-            }
-            
-            .main-nav li {
-                margin: 0.5rem 0;
-                text-align: center;
-            }
-            
-            .main-nav a {
-                font-size: 0.9rem;
-                padding: 0.5rem 1rem;
-                display: block;
-            }
-            
-            .hamburger-menu.active span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-            
-            .hamburger-menu.active span:nth-child(2) {
-                opacity: 0;
-            }
-            
-            .hamburger-menu.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -7px);
-            }
-            
-            .artist-images {
-                padding: 0 1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .main-nav a {
-                font-size: 0.85rem;
-            }
-        }
-    </style>
-    
     <!-- Favicon -->
     <link rel="icon" href="images/favicons/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
@@ -193,118 +53,25 @@
             <span></span>
         </div>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#statement">Statement</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#exhibitions">Exhibitions</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#collections">Collections</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-            <li><a href="/manifesto">Manifesto</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/portfolio.html">Portfolio</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="pages/press.html">Press</a></li>
+            <li><a href="pages/shop.html">Shop</a></li>
         </ul>
     </nav>
 
     <section id="home" class="home">
-        <h1 class="artist-name">Lya Helia</h1>
+        <img src="images/signature.png" alt="Lya Helia" class="artist-signature">
     </section>
 
-    <div class="artist-images">
-        <img src="images/lyahelia/lyahelia-2.jpg" alt="Lya Helia artwork" class="artist-portrait">
-        <!--img src="images/lyahelia/lyahelia-1.jpg" alt="Lya Helia portrait" class="artist-portrait artist-portrait-padded"!-->
-    </div>
 
-    <section id="gallery" class="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-grid" id="gallery-container"></div>
-    </section>
-
-    <section id="statement" class="statement">
-        <h2>Artist Statement</h2>
-        <div class="statement-content">
-            <p>In my work, I explore the dynamic changes of our time, mirroring the evolution of human perception and its connection to the cosmos. Through painting, I bring intangible experiences into physical form.</p>
-            <p>I create intergalactic landscapes, depicting planets and beings made of pure energy. These works offer a glimpse into realities beyond the material world. By painting these realms, I invite viewers to reflect on the unseen forces shaping their own lives and recognize that energy and consciousness extend far beyond what we perceive.</p>
-            <p>My work serves as a visual bridge between the material and the unseen. In a world of rapid change, my paintings offer a space for reflection, inviting viewers to embrace new perspectives and reconnect with the vastness of existence.</p>
-            <p>My creating process is both structured and fluid—I begin with a vision, allowing materials and colors to guide me as the painting evolves, creating a dialogue between intention and intuition, where movement and layering subtly lead the viewer toward deeper perception.</p>
-            <p>At its core, my work is an invitation to expanded awareness, encouraging a deeper understanding of the hidden forces shaping reality and our connection to something far greater than ourselves.</p>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <h2>About</h2>
-        <div class="bio">
-            <p>Born in 1995 in Baku, Azerbaijan, Lya Helia is a Bali-based, self-taught abstract artist who explores the dynamic changes of our time, mirroring the evolution of human perception and its connection to the cosmos. Her distinctive style conveys dynamic and evocative color schemes through mediums such as watercolor, acrylic, collage, and digital illustration, capturing the spectrum of human emotions.</p>
-        </div>
-    </section>
-
-    <section id="exhibitions" class="exhibitions">
-        <h2>Exhibitions</h2>
-        <ul class="exhibition-list">
-            <li>
-                <span class="year">2025</span>
-                <span class="title">'The Power of She'</span>
-                <span class="details">Group Exhibition / Sadik Art Brokerage / Kerobokan, Bali, Indonesia</span>
-            </li>
-            <li>
-                <span class="year">2024</span>
-                <span class="title">'Love for the Body'</span>
-                <span class="details">Group Exhibition / Canang Sari Art Residency / Uluwatu, Bali, Indonesia</span>
-            </li>
-            <li>
-                <span class="year">2024</span>
-                <span class="title">'Love for the Earth'</span>
-                <span class="details">Group Exhibition / Canang Sari Art Residency / Uluwatu, Bali, Indonesia</span>
-            </li>
-            <li>
-                <span class="year">2023</span>
-                <span class="title">'Hero's Journey'</span>
-                <span class="details">Solo Exhibition / Lya Helia's Art Studio / Ubud, Bali, Indonesia</span>
-            </li>
-        </ul>
-    </section>
-
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div class="project-item">
-            <h3>'Girl in Bistro', 2024</h3>
-            <p>Commission created specially for Cheat Meal Bistro, Canggu, Bali, Indonesia, and exhibited in this space from February till May.</p>
-        </div>
-        <div class="project-item">
-            <h3>'Emotional Postcards', 2022</h3>
-            <p>Capsule postcard series, featured at an art fair 'Bizimkilər' in Baku, Azerbaijan.</p>
-        </div>
-    </section>
-
-    <section id="collections" class="collections">
-        <h2>Collections</h2>
-        <div class="permanent-exhibitions">
-            <h3>Permanent Exhibitions</h3>
-            <ul>
-                <li>Gr8t Art House / Baku, Azerbaijan / Since 2021</li>
-                <li>Emelatkhana Art Space / Baku, Azerbaijan / Since 2022</li>
-                <li>Hiss Art Space / Baku, Azerbaijan / Since 2023</li>
-            </ul>
-        </div>
-        <div class="private-collections">
-            <p>Held in private collections globally, including the Netherlands, US, UK, Turkey, Indonesia, and Azerbaijan.</p>
-        </div>
-    </section>
-
-    <section id="contacts" class="contacts">
-        <h2>Contacts</h2>
-        <div class="contact-info">
-            <p>email: <a href="mailto:lyahelia317@gmail.com">lyahelia317@gmail.com</a></p>
-            <p>phone: <a href="tel:+6281337984291">+62 81337984291</a></p>
-            <p>instagram: <a href="https://www.instagram.com/lya.helia/" target="_blank">@lya.helia</a></p>
-        </div>
-    </section>
 
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
-    <script src="js/gallery.js"></script>
     <script src="js/main.js"></script>
     <script>
         // Hamburger menu toggle
