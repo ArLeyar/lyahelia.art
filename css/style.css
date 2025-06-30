@@ -199,40 +199,106 @@ h1, h2, h3, h4, h5, h6 {
 .press-item {
     text-decoration: none;
     color: inherit;
-    display: block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .press-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
 .press-image {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
-    display: block;
+    margin-bottom: 1rem;
 }
 
 .press-caption {
-    padding: 1.5rem;
-    background-color: white;
+    text-align: center;
 }
 
 .press-caption h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    color: var(--text-color);
 }
 
 .press-caption p {
-    margin: 0;
-    color: #666;
     font-size: 0.9rem;
+    color: #666;
+}
+
+/* Portfolio page styles */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.portfolio-item {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.05);
+}
+
+.portfolio-caption {
+    text-align: center;
+}
+
+.portfolio-caption h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-back {
+    margin-bottom: 2rem;
+}
+
+.portfolio-back a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.portfolio-back a:hover {
+    color: var(--primary-color);
+}
+
+.portfolio-description {
+    margin-top: 2rem;
+}
+
+.portfolio-description p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -324,6 +390,11 @@ h1, h2, h3, h4, h5, h6 {
 
     .press-caption {
         padding: 1rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
