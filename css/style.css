@@ -301,6 +301,57 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
 }
 
+/* Portfolio gallery styles */
+.portfolio-gallery {
+    margin-top: 3rem;
+}
+
+.featured-image {
+    margin-bottom: 2rem;
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.featured-image img:hover {
+    opacity: 0.9;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    opacity: 0.9;
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .hamburger-menu {
         display: block;
@@ -395,6 +446,15 @@ h1, h2, h3, h4, h5, h6 {
     .portfolio-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .featured-image {
+        margin-bottom: 1.5rem;
     }
 }
 
