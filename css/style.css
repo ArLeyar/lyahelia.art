@@ -21,6 +21,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
+    padding-top: 60px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,12 +30,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
 .main-nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 1rem 0;
+    background-color: white;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -43,22 +48,56 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.main-nav li {
+    margin: 0 1rem;
 }
 
 .main-nav a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #333;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-    color: var(--primary-color);
+    color: #000;
+}
+
+.artist-images {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+
+.artist-portrait {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.artist-portrait-padded {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30%;
+    box-sizing: content-box;
 }
 
 section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-content {
     padding: 5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -71,10 +110,11 @@ section {
     justify-content: center;
 }
 
-.artist-name {
-    font-family: 'Dancing Script', cursive;
-    font-size: 5rem;
-    text-align: center;
+.artist-signature {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .gallery-grid {
@@ -183,17 +223,70 @@ section {
 }
 
 @media (max-width: 768px) {
-    .main-nav {
-        padding: 0.5rem;
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+        z-index: 100;
+        position: absolute;
+        right: 10px;
+        top: 10px;
     }
-
+    
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+    }
+    
     .main-nav ul {
-        flex-wrap: wrap;
-        gap: 1rem;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 60px 0 20px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 90;
+    }
+    
+    .main-nav.active ul {
+        display: flex;
+    }
+    
+    .main-nav li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    
+    .main-nav a {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        display: block;
+    }
+    
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    .artist-name {
-        font-size: 3rem;
+    .artist-signature {
+        max-width: 300px;
+    }
+
+    .artist-images {
+        padding: 0 1rem;
     }
 
     section {
@@ -207,13 +300,11 @@ section {
 }
 
 @media (max-width: 480px) {
-    .main-nav ul {
-        flex-direction: column;
-        text-align: center;
+    .main-nav a {
+        font-size: 0.85rem;
     }
 
-    .artist-name {
-        font-size: 2.5rem;
+    .artist-signature {
+        max-width: 250px;
     }
-} 
 } 
