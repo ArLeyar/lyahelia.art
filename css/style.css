@@ -306,6 +306,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 3rem;
 }
 
+.artwork-info h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
 .featured-image {
     margin-bottom: 2rem;
 }
