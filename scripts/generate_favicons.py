@@ -33,4 +33,4 @@ def generate_favicons(source_image_path):
 
 if __name__ == '__main__':
     create_favicon_dir()
-    generate_favicons('images/gallery/textures/textures-6.jpg') 
+    generate_favicons('images/Untitled_Artwork.png') 

@@ -32,17 +32,21 @@ def generate_social_preview(source_image_path):
     width, height = img.size
     ratio = width / height
     
-    # Calculate dimensions for cropping
+    # Calculate dimensions for padding instead of cropping
     if ratio > target_ratio:
-        # Image is wider than needed
-        new_width = int(height * target_ratio)
-        offset = (width - new_width) // 2
-        img = img.crop((offset, 0, offset + new_width, height))
-    else:
-        # Image is taller than needed
+        # Image is wider than target - add padding top/bottom
         new_height = int(width / target_ratio)
-        offset = (height - new_height) // 2
-        img = img.crop((0, offset, width, offset + new_height))
+        canvas = Image.new('RGB', (width, new_height), 'white')
+        offset = (new_height - height) // 2
+        canvas.paste(img, (0, offset))
+        img = canvas
+    else:
+        # Image is taller than target - add padding left/right
+        new_width = int(height * target_ratio)
+        canvas = Image.new('RGB', (new_width, height), 'white')
+        offset = (new_width - width) // 2
+        canvas.paste(img, (offset, 0))
+        img = canvas
     
     # Resize to target dimensions
     img = img.resize((target_width, target_height), Image.Resampling.LANCZOS)
@@ -81,4 +85,4 @@ def generate_social_preview(source_image_path):
     print(f"Small preview: {small_size:.1f}KB")
 
 if __name__ == '__main__':
-    generate_social_preview('images/gallery/textures/textures-6.jpg') 
+    generate_social_preview('images/Untitled_Artwork.png') 
