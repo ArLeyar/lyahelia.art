@@ -338,6 +338,20 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 3rem;
 }
 
+.gallery-grid-four {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-grid-two-by-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
 .gallery-grid img {
     width: 100%;
     height: auto;
@@ -347,6 +361,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gallery-grid img:hover {
+    opacity: 0.9;
+}
+
+.gallery-grid-four img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-grid-four img:hover {
+    opacity: 0.9;
+}
+
+.gallery-grid-two-by-two img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-grid-two-by-two img:hover {
     opacity: 0.9;
 }
 
@@ -458,6 +496,16 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .gallery-grid-four {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .gallery-grid-two-by-two {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
