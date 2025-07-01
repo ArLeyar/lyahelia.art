@@ -4,7 +4,11 @@ import re
 from pathlib import Path
 import pillow_heif
 
-def optimize_image(input_path, output_path, max_width=1600):
+def optimize_image(input_path, output_path, max_width=2400, quality=95):
+    """
+    Optimize image while preserving high quality for artist portfolio.
+    Uses higher resolution limit and quality settings to maintain color fidelity.
+    """
     if input_path.suffix.lower() == '.heic':
         heif_file = pillow_heif.read_heif(input_path)
         img = Image.frombytes(
@@ -20,26 +24,39 @@ def optimize_image(input_path, output_path, max_width=1600):
         # Preserve the orientation from EXIF data
         img = ImageOps.exif_transpose(img)
     
+    # Convert RGBA to RGB with white background if needed
     if img.mode in ('RGBA', 'LA'):
         background = Image.new('RGB', img.size, 'white')
         background.paste(img, mask=img.getchannel('A'))
         img = background
     
+    # Only resize if image is significantly larger than max_width
     width, height = img.size
     if width > max_width:
         ratio = max_width / width
         new_size = (max_width, int(height * ratio))
+        # Use LANCZOS for high-quality resizing
         img = img.resize(new_size, Image.Resampling.LANCZOS)
     
-    img.save(output_path, 'JPEG', quality=85, optimize=True)
+    # Save with high quality settings optimized for art
+    img.save(output_path, 'JPEG', quality=quality, optimize=True, progressive=True)
     if hasattr(img, 'close'):
         img.close()
 
 def clean_filename(filename):
-    return re.sub(r'[^a-zA-Z0-9-]', '-', filename).lower()
+    """Clean filename and ensure it's lowercase"""
+    # Remove file extension for processing
+    name_without_ext = Path(filename).stem
+    # Replace non-alphanumeric characters with hyphens and make lowercase
+    cleaned = re.sub(r'[^a-zA-Z0-9\-\.\(\)\s]', '-', name_without_ext)
+    # Replace multiple hyphens with single hyphen
+    cleaned = re.sub(r'-+', '-', cleaned)
+    # Remove leading/trailing hyphens
+    cleaned = cleaned.strip('-')
+    return cleaned.lower()
 
 def process_portfolio():
-    """Process portfolio images while preserving original filenames"""
+    """Process portfolio images while preserving structure and ensuring lowercase filenames"""
     root_dir = Path(__file__).parent.parent
     portfolio_dir = root_dir / 'images/portfolio'
     
@@ -57,16 +74,29 @@ def process_portfolio():
         image_files = [f for f in subdir.glob('*') if f.suffix.lower() in ('.jpg', '.jpeg', '.png', '.heic', '.JPG')]
         
         for file in image_files:
+            # Create lowercase filename
+            clean_name = clean_filename(file.name)
+            new_filename = f"{clean_name}.jpg"
+            final_output = subdir / new_filename
+            
+            # Skip if filename is already correct
+            if file.name.lower() == new_filename and file.suffix.lower() == '.jpg':
+                print(f"  Skipping (already optimized): {file.name}")
+                continue
+            
             # Create a temporary optimized file
-            temp_output = file.with_suffix('.tmp.jpg')
+            temp_output = subdir / f"{clean_name}.tmp.jpg"
             
             try:
-                print(f"  Optimizing: {file.name}")
-                optimize_image(file, temp_output)
+                print(f"  Optimizing: {file.name} -> {new_filename}")
+                optimize_image(file, temp_output, max_width=2400, quality=95)
                 
-                # Replace original with optimized version
-                file.unlink()  # Remove original
-                temp_output.rename(file.with_suffix('.jpg'))  # Rename temp to original name (with .jpg extension)
+                # If original filename is different, remove it
+                if file.name != new_filename:
+                    file.unlink()
+                
+                # Rename temp to final filename
+                temp_output.rename(final_output)
                 
             except Exception as e:
                 print(f"  Error processing {file}: {e}")
@@ -102,7 +132,7 @@ def process_lyahelia():
         
         try:
             print(f"Optimizing: {file.name} -> {output_filename}")
-            optimize_image(file, output_path)
+            optimize_image(file, output_path, max_width=2400, quality=95)
             # Note: originals are kept
         except Exception as e:
             print(f"Error processing {file}: {e}")
@@ -149,7 +179,7 @@ def process_gallery(folder_name=None):
                 output_path = series_path / new_filename
                 
                 try:
-                    optimize_image(file, output_path)
+                    optimize_image(file, output_path, max_width=2400, quality=95)
                     if file.name != new_filename:
                         file.unlink()
                     
