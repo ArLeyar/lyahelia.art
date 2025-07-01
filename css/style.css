@@ -177,6 +177,18 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
 }
 
+.inline-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.inline-link:hover {
+    color: var(--text-color);
+}
+
 .contact-link {
     display: flex;
     align-items: center;
