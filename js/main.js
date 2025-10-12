@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.main-nav a');
     const nav = document.querySelector('.main-nav');
-    let lastScrollTop = 0;
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -40,15 +39,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop) {
-            nav.style.transform = 'translateY(-100%)';
-        } else {
-            nav.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+    // Header remains sticky via CSS; no scroll behavior needed
 }); 
