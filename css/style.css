@@ -17,7 +17,8 @@ html {
 }
 
 body {
-    font-family: 'Merriweather', serif;
+    font-family: 'Quattrocento', serif;
+    font-size: 110%;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -25,8 +26,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
@@ -58,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 .main-nav a {
     text-decoration: none;
     color: #000;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Frank Ruhl Libre', serif;
     font-weight: 600;
     text-transform: uppercase;
     transition: color 0.3s ease;
@@ -169,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
 .pdf-link {
     color: var(--text-color);
     text-decoration: underline;
-    font-family: 'Merriweather', serif;
+    font-family: 'Quattrocento', serif;
     font-weight: 400;
     transition: color 0.3s ease;
 }
@@ -181,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
 .inline-link {
     color: var(--primary-color);
     text-decoration: underline;
-    font-family: 'Merriweather', serif;
+    font-family: 'Quattrocento', serif;
     font-weight: 400;
     transition: color 0.3s ease;
 }
@@ -231,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .press-caption h3 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Frank Ruhl Libre', serif;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -283,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-caption h3 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Frank Ruhl Libre', serif;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -295,7 +296,7 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-back a {
     color: var(--text-color);
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Frank Ruhl Libre', serif;
     font-weight: 400;
     transition: color 0.3s ease;
 }
@@ -320,9 +321,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .artwork-info h3 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-style: italic;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 600;
     font-size: 1rem;
     color: #666;
     margin-bottom: 0.5rem;
@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Frank Ruhl Libre', serif;
     font-size: 1rem;
     text-align: center;
 }
