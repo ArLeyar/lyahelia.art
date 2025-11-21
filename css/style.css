@@ -97,6 +97,16 @@ h1, h2, h3, h4, h5, h6 {
     object-position: center;
 }
 
+.artist-signature picture,
+.artist-signature img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
 .lightbox {
     display: none;
     position: fixed;
@@ -721,11 +731,40 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-color);
 }
 
-.price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+.price-button-container {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
     margin-top: 1rem;
+}
+
+.price {
+    font-size: 1.65rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-decoration: none;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    vertical-align: baseline;
+}
+
+.buy-button:hover {
+    background-color: #333333;
 }
 
 .purchase-steps {
