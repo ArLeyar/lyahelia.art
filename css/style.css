@@ -1160,6 +1160,149 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
 }
 
+/* Newsletter Section */
+.newsletter-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+    border: 1px solid var(--medium-gray);
+}
+
+.newsletter-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    text-align: left;
+}
+
+.newsletter-portrait {
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.portrait-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portrait-image:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.newsletter-text-content {
+    flex: 1;
+}
+
+.newsletter-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #101010;
+}
+
+.newsletter-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    margin-top: 2rem;
+}
+
+.form-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-group input[type="email"] {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    font-family: 'Quattrocento', serif;
+    font-size: 1rem;
+    border: 2px solid var(--medium-gray);
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input[type="email"]::placeholder {
+    color: #999;
+}
+
+.subscribe-button {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.subscribe-button:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+}
+
+.subscribe-button:active {
+    transform: translateY(0);
+}
+
+.privacy-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.newsletter-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #c3e6cb;
+    margin-top: 1rem;
+}
+
+.newsletter-success p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--background-color);
+    padding: 2rem 0 0;
+    margin-top: 4rem;
+}
+
+.site-footer .newsletter-section {
+    margin-bottom: 0;
+}
+
 .terms-section {
     text-align: center;
     padding: 2rem;
@@ -1212,6 +1355,25 @@ h1, h2, h3, h4, h5, h6 {
     
     .final-title {
         font-size: 1.5rem;
+    }
+    
+    .newsletter-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .newsletter-title {
+        font-size: 2rem;
+    }
+    
+    .form-group {
+        flex-direction: column;
+    }
+    
+    .subscribe-button {
+        width: 100%;
     }
 }
 
@@ -1298,5 +1460,39 @@ h1, h2, h3, h4, h5, h6 {
     .play-button svg {
         width: 50px;
         height: 50px;
+    }
+    
+    .newsletter-section {
+        padding: 2rem 1rem;
+    }
+    
+    .newsletter-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .portrait-image {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .newsletter-title {
+        font-size: 1.5rem;
+    }
+    
+    .newsletter-description {
+        font-size: 1rem;
+    }
+    
+    .form-group input[type="email"] {
+        padding: 0.875rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .subscribe-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
     }
 } 
