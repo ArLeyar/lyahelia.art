@@ -19,17 +19,25 @@ html {
 body {
     font-family: 'Quattrocento', serif;
     font-size: 110%;
-    line-height: 1.6;
+    line-height: 1.8;
     color: var(--text-color);
     background-color: var(--background-color);
     padding-top: 60px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Frank Ruhl Libre', serif;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: #101010;
+    letter-spacing: 0.02em;
 }
 
 .hamburger-menu {
@@ -454,7 +462,7 @@ h1, h2, h3, h4, h5, h6 {
         right: 10px;
         top: 10px;
     }
-    
+
     .hamburger-menu span {
         display: block;
         width: 25px;
@@ -463,7 +471,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 5px;
         transition: all 0.3s ease;
     }
-    
+
     .main-nav ul {
         display: none;
         flex-direction: column;
@@ -475,35 +483,35 @@ h1, h2, h3, h4, h5, h6 {
         left: 0;
         z-index: 90;
     }
-    
+
     .main-nav.active ul {
         display: flex;
     }
-    
+
     .main-nav li {
         margin: 0.5rem 0;
         text-align: center;
     }
-    
+
     .main-nav a {
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
         display: block;
     }
-    
+
     .hamburger-menu.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
-    
+
     .hamburger-menu.active span:nth-child(2) {
         opacity: 0;
     }
-    
+
     .hamburger-menu.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    
+
 
     .page-content {
         padding: 3rem 1rem;
@@ -561,7 +569,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Sales Page Styles */
 .sales-section {
     background-color: var(--background-color);
-    padding: 4rem 0;
+    padding: 6rem 0;
 }
 
 .sales-hero {
@@ -594,7 +602,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .philosophy-section {
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .philosophy-title {
@@ -617,10 +628,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .limited-release {
     background-color: var(--light-gray);
-    padding: 3rem 2rem;
-    border-radius: 8px;
-    margin-bottom: 4rem;
+    padding: 5rem 3rem;
+    border-radius: 16px;
+    margin-bottom: 8rem;
     text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .limited-title {
@@ -639,7 +653,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .artwork-gallery {
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 }
 
 .gallery-title {
@@ -659,15 +673,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .artwork-item {
     background-color: var(--background-color);
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .artwork-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12), 0 8px 16px -4px rgba(0, 0, 0, 0.08);
 }
 
 .artwork-images {
@@ -765,13 +780,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .buy-button:hover {
     background-color: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.buy-button:active {
+    transform: translateY(0);
 }
 
 .purchase-steps {
     background-color: var(--light-gray);
-    padding: 3rem 2rem;
-    border-radius: 8px;
-    margin-bottom: 4rem;
+    padding: 5rem 3rem;
+    border-radius: 16px;
+    margin-bottom: 8rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .steps-title {
@@ -820,7 +844,7 @@ h1, h2, h3, h4, h5, h6 {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: left 0.5s;
 }
 
@@ -905,7 +929,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bonuses-section {
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bonuses-title {
@@ -929,9 +956,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .a4-works {
     background-color: var(--light-gray);
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
+    padding: 3rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
 }
 
 .a4-works h4 {
@@ -958,7 +985,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .testimonials-section {
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 }
 
 .testimonials-title {
@@ -971,10 +998,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .testimonial {
     background-color: var(--light-gray);
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
+    padding: 4rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
     text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .testimonial-content {
@@ -1115,10 +1145,10 @@ h1, h2, h3, h4, h5, h6 {
 .final-cta {
     background-color: var(--primary-color);
     color: var(--background-color);
-    padding: 3rem 2rem;
-    border-radius: 8px;
+    padding: 6rem 2rem;
+    border-radius: 16px;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 }
 
 .final-title {
@@ -1163,10 +1193,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Newsletter Section */
 .newsletter-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 12px;
-    padding: 4rem 2rem;
-    margin-bottom: 4rem;
-    border: 1px solid var(--medium-gray);
+    border-radius: 16px;
+    padding: 5rem 3rem;
+    margin-bottom: 6rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
 }
 
 .newsletter-content {
@@ -1323,55 +1354,55 @@ h1, h2, h3, h4, h5, h6 {
     .sales-title {
         font-size: 2rem;
     }
-    
+
     .philosophy-title {
         font-size: 1.5rem;
     }
-    
+
     .gallery-title {
         font-size: 2rem;
     }
-    
+
     .artwork-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .artwork-item {
         margin: 0 1rem;
     }
-    
+
     .limited-title {
         font-size: 1.5rem;
     }
-    
+
     .steps-title {
         font-size: 1.5rem;
     }
-    
+
     .testimonials-title {
         font-size: 2rem;
     }
-    
+
     .final-title {
         font-size: 1.5rem;
     }
-    
+
     .newsletter-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 2rem;
     }
-    
+
     .newsletter-title {
         font-size: 2rem;
     }
-    
+
     .form-group {
         flex-direction: column;
     }
-    
+
     .subscribe-button {
         width: 100%;
     }
@@ -1381,118 +1412,137 @@ h1, h2, h3, h4, h5, h6 {
     .main-nav a {
         font-size: 0.85rem;
     }
-    
+
     .sales-section {
-        padding: 2rem 0;
+        padding: 3rem 0;
     }
-    
+
+    .philosophy-section,
+    .limited-release,
+    .artwork-gallery,
+    .purchase-steps,
+    .bonuses-section,
+    .testimonials-section,
+    .final-cta,
+    .newsletter-section {
+        margin-bottom: 4rem;
+    }
+
+    .limited-release,
+    .purchase-steps,
+    .testimonial,
+    .final-cta,
+    .newsletter-section {
+        padding: 3rem 1.5rem;
+    }
+
     .sales-title {
         font-size: 1.5rem;
     }
-    
+
     .artwork-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
+
     .artwork-item {
         margin: 0;
     }
-    
+
     .artwork-main {
         height: 300px;
         padding: 0.5rem;
     }
-    
+
     .artwork-detail {
         height: 80px;
         padding: 0.25rem;
     }
-    
+
     .artwork-details {
         padding: 1rem;
         gap: 0.5rem;
     }
-    
+
     .testimonial-images {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .testimonial-screenshot {
         width: 200px;
     }
-    
+
     .testimonial-video {
         max-width: 300px;
     }
-    
+
     .carousel-container {
         max-width: 100%;
     }
-    
+
     .carousel-image {
         max-height: 300px;
     }
-    
+
     .carousel-prev,
     .carousel-next {
         padding: 8px 12px;
         font-size: 16px;
     }
-    
+
     .carousel-prev {
         left: 5px;
     }
-    
+
     .carousel-next {
         right: 5px;
     }
-    
+
     .video-preview {
         padding: 1.5rem;
     }
-    
+
     .video-preview h3 {
         font-size: 1.2rem;
     }
-    
+
     .play-button svg {
         width: 50px;
         height: 50px;
     }
-    
+
     .newsletter-section {
         padding: 2rem 1rem;
     }
-    
+
     .newsletter-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 1.5rem;
     }
-    
+
     .portrait-image {
         width: 160px;
         height: 160px;
     }
-    
+
     .newsletter-title {
         font-size: 1.5rem;
     }
-    
+
     .newsletter-description {
         font-size: 1rem;
     }
-    
+
     .form-group input[type="email"] {
         padding: 0.875rem 1rem;
         font-size: 0.95rem;
     }
-    
+
     .subscribe-button {
         padding: 0.875rem 1.5rem;
         font-size: 0.95rem;
     }
-} 
+}
