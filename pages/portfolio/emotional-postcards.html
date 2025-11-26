@@ -38,8 +38,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&family=Quattrocento:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
     
-
-    
     <!-- Favicon -->
     <link rel="icon" href="../../images/favicons/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicons/favicon-32x32.png">
@@ -127,26 +125,6 @@
     </section>
 
     <script src="../../js/main.js"></script>
-    <script>
-        // Hamburger menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger-menu');
-            const nav = document.querySelector('.main-nav');
-            
-            hamburger.addEventListener('click', function() {
-                nav.classList.toggle('active');
-                hamburger.classList.toggle('active');
-            });
-            
-            // Close menu when clicking on a link
-            const navLinks = document.querySelectorAll('.main-nav a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    nav.classList.remove('active');
-                    hamburger.classList.remove('active');
-                });
-            });
-        });
-    </script>
+    <script src="../../js/newsletter.js"></script>
 </body>
-</html> 
+</html>

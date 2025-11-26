@@ -1718,3 +1718,56 @@ h6 {
 .newsletter-text-content .privacy-note {
     margin-top: 1rem;
 }
+
+/* MailerLite Form Styles - Applied to all pages */
+#mlb2-33791224.ml-form-embedContainer .ml-form-embedWrapper {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+#mlb2-33791224 .ml-form-embedBody {
+    padding: 0 !important;
+}
+
+#mlb2-33791224 .ml-form-fieldRow input {
+    width: 100% !important;
+    padding: 1rem 1.25rem !important;
+    font-size: 1rem !important;
+    font-family: 'Quattrocento', serif !important;
+    border: 2px solid #ddd !important;
+    border-radius: 8px !important;
+    margin-bottom: 1rem !important;
+    background: white !important;
+    color: #333 !important;
+    box-sizing: border-box !important;
+}
+
+#mlb2-33791224 .ml-form-fieldRow input:focus {
+    outline: none !important;
+    border-color: #333 !important;
+}
+
+#mlb2-33791224 .ml-form-embedSubmit button {
+    width: 100% !important;
+    padding: 1rem 2rem !important;
+    background: #333 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    font-family: 'Quattrocento', serif !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: background 0.3s ease !important;
+}
+
+#mlb2-33791224 .ml-form-embedSubmit button:hover {
+    background: #555 !important;
+}
+
+#mlb2-33791224 .ml-form-successBody {
+    display: none !important;
+}
