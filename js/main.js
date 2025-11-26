@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             // Special case for links like "/#section" - only from index page to index page
-            else if (href.startsWith('/#') && window.location.pathname === '/' || window.location.pathname === '/index.html') {
+            else if (href.startsWith('/#') && (window.location.pathname === '/' || window.location.pathname === '/index.html')) {
                 e.preventDefault();
                 const hashPart = href.substring(href.indexOf('#'));
                 const targetSection = document.querySelector(hashPart);
@@ -30,14 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         behavior: 'smooth'
                     });
                 } else {
-                    // If target not found, follow the link normally
                     window.location.href = href;
                 }
             }
-            // All other links (like "/manifesto") - let browser handle normally
-            // No preventDefault() means normal navigation occurs
+            // All other links - let browser handle normally
         });
     });
-
-    // Header remains sticky via CSS; no scroll behavior needed
 }); 
