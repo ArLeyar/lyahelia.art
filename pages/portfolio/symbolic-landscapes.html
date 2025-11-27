@@ -12,7 +12,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Symbolic Landscapes - Lya Helia - Abstract Artist based in Bali, exploring the dynamic changes of our time through painting and digital art.">
+    <meta name="description" content="Symbolic Landscapes (2022) by Lya Helia: Analog collages exploring spatial relationships between organic and built environments through form, rhythm, and the interplay of shapes.">
     <title>Symbolic Landscapes - Lya Helia - Abstract Artist</title>
 
     <!-- Essential Meta Tags -->
@@ -43,7 +43,72 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="author" content="Lya Helia">
     <meta name="keywords" content="symbolic landscapes, abstract art, artist, Bali, contemporary art, painting, digital art, Lya Helia">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lyahelia.art/pages/portfolio/symbolic-landscapes.html">
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://lyahelia.art/pages/portfolio/symbolic-landscapes.html#webpage",
+          "url": "https://lyahelia.art/pages/portfolio/symbolic-landscapes.html",
+          "name": "Symbolic Landscapes Series - Lya Helia",
+          "description": "Symbolic Landscapes (2022) is a series of analog collages exploring spatial relationships between organic and built environments.",
+          "isPartOf": {
+            "@id": "https://lyahelia.art/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://lyahelia.art/pages/portfolio/symbolic-landscapes.html#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://lyahelia.art/pages/portfolio/symbolic-landscapes.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://lyahelia.art/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Portfolio",
+              "item": "https://lyahelia.art/pages/portfolio.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Symbolic Landscapes",
+              "item": "https://lyahelia.art/pages/portfolio/symbolic-landscapes.html"
+            }
+          ]
+        },
+        {
+          "@type": "VisualArtwork",
+          "name": "Symbolic Landscapes Series",
+          "creator": {
+            "@id": "https://lyahelia.art/#person"
+          },
+          "artform": "Collage",
+          "artMedium": "Analog Collage",
+          "dateCreated": "2022",
+          "description": "A series of analog collages made from fragments of bodies, architecture, and natural elements, exploring spatial relationships."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&family=Quattrocento:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
     
@@ -55,53 +120,65 @@
     <link rel="manifest" href="../../site.webmanifest">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../portfolio.html">Portfolio</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-            <li><a href="../press.html">Press</a></li>
-            <li><a href="../shop.html">Shop</a></li>
-        </ul>
-    </nav>
-
-    <section class="page-content">
-        <div class="portfolio-back">
-            <a href="../portfolio.html">&larr; Back to Portfolio</a>
-        </div>
-        
-        <div class="portfolio-description">
-            <p>Symbolic Landscapes (2022) is a series of analog collages made from fragments of bodies, architecture, and natural elements. The works explore spatial relationships between organic and built environments. The focus is on form and rhythm, with an intention to convey the meaning behind the names of natural places—mountains, rivers—through composition, contrast, and the interplay of shapes.</p>
-        </div>
-
-        <div class="portfolio-gallery">
-            <!-- Single column layout for 3 images -->
-            <div class="featured-image">
-                <img src="../../images/portfolio/2. symbolic landscapes (2022)/1. welcoming (be-barmaq).jpg" alt="Symbolic Landscapes - Welcoming (Beşbarmaq)" class="gallery-image" data-title="Symbolic Landscapes - Welcoming (Beşbarmaq)">
+    <header>
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../press.html">Press</a></li>
+                <li><a href="../shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-content">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li aria-current="page">Symbolic Landscapes</li>
+                </ol>
+            </nav>
             
-            <div class="featured-image">
-                <img src="../../images/portfolio/2. symbolic landscapes (2022)/2. feels like summer (batabat).jpg" alt="Symbolic Landscapes - Feels Like Summer (Batabat)" class="gallery-image" data-title="Symbolic Landscapes - Feels Like Summer (Batabat)">
+            <div class="portfolio-description">
+                <p>Symbolic Landscapes (2022) is a series of analog collages made from fragments of bodies, architecture, and natural elements. The works explore spatial relationships between organic and built environments. The focus is on form and rhythm, with an intention to convey the meaning behind the names of natural places—mountains, rivers—through composition, contrast, and the interplay of shapes.</p>
             </div>
 
-            <div class="featured-image">
-                <img src="../../images/portfolio/2. symbolic landscapes (2022)/3. and all that jazz (bakuvian night).jpg" alt="Symbolic Landscapes - And All That Jazz (Bakuvian Night)" class="gallery-image" data-title="Symbolic Landscapes - And All That Jazz (Bakuvian Night)">
-            </div>
-        </div>
+            <div class="portfolio-gallery">
+                <!-- Single column layout for 3 images -->
+                <div class="featured-image">
+                    <img src="../../images/portfolio/2. symbolic landscapes (2022)/1. welcoming (be-barmaq).jpg" alt="Welcoming (Beşbarmaq) - analog collage by Lya Helia inspired by Azerbaijan landscape (2022)" class="gallery-image" data-title="Symbolic Landscapes - Welcoming (Beşbarmaq)">
+                </div>
+                
+                <div class="featured-image">
+                    <img src="../../images/portfolio/2. symbolic landscapes (2022)/2. feels like summer (batabat).jpg" alt="Feels Like Summer (Batabat) - analog collage by Lya Helia (2022)" class="gallery-image" data-title="Symbolic Landscapes - Feels Like Summer (Batabat)" loading="lazy">
+                </div>
 
-        <!-- Lightbox for image viewing -->
-        <div id="lightbox" class="lightbox">
-            <span class="close">&times;</span>
-            <img class="lightbox-content" id="lightbox-img">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-        </div>
-    </section>
+                <div class="featured-image">
+                    <img src="../../images/portfolio/2. symbolic landscapes (2022)/3. and all that jazz (bakuvian night).jpg" alt="And All That Jazz (Bakuvian Night) - analog collage by Lya Helia (2022)" class="gallery-image" data-title="Symbolic Landscapes - And All That Jazz (Bakuvian Night)" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Lightbox for image viewing -->
+            <div id="lightbox" class="lightbox" role="dialog" aria-label="Image lightbox">
+                <span class="close">&times;</span>
+                <img class="lightbox-content" id="lightbox-img">
+                <div class="lightbox-caption" id="lightbox-caption"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lya Helia. All rights reserved.</p>
+    </footer>
 
     <script src="../../js/main.js"></script>
     <script src="../../js/newsletter.js"></script>

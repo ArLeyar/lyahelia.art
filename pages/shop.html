@@ -12,13 +12,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop - Lya Helia - Abstract Artist based in Bali, exploring the dynamic changes of our time through painting and digital art.">
+    <meta name="description" content="Purchase original abstract artworks and museum-quality prints by Lya Helia. Available on Saatchi Art and Artmajeur. Textured paintings, mixed media, and watercolors.">
     <title>Shop - Lya Helia - Abstract Artist</title>
 
     <!-- Essential Meta Tags -->
     <meta property="og:site_name" content="Lya Helia Art">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lyahelia.art/shop.html">
+    <meta property="og:url" content="https://lyahelia.art/pages/shop.html">
     <meta property="og:title" content="Shop - Lya Helia - Abstract Artist">
     <meta property="og:description" content="Shop original artworks by Bali-based abstract artist Lya Helia.">
     
@@ -43,7 +43,55 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="author" content="Lya Helia">
     <meta name="keywords" content="shop, buy, artwork, abstract art, artist, Bali, contemporary art, painting, digital art, Lya Helia">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lyahelia.art/pages/shop.html">
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://lyahelia.art/pages/shop.html#webpage",
+          "url": "https://lyahelia.art/pages/shop.html",
+          "name": "Shop - Lya Helia Art",
+          "description": "Purchase original artworks and prints by Bali-based abstract artist Lya Helia.",
+          "isPartOf": {
+            "@id": "https://lyahelia.art/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://lyahelia.art/pages/shop.html#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://lyahelia.art/pages/shop.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://lyahelia.art/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Shop",
+              "item": "https://lyahelia.art/pages/shop.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&family=Quattrocento:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     
@@ -55,28 +103,36 @@
     <link rel="manifest" href="../site.webmanifest">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="press.html">Press</a></li>
-            <li><a href="shop.html" class="active">Shop</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="press.html">Press</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="page-content">
-        <h1>Shop</h1>
-        <div class="shop-content">
-            <p>Original works available for purchase. Selected pieces also offered as prints on museum-quality paper. Explore full listings in my online shops on <a href="https://www.saatchiart.com/en-id/lyahelia" target="_blank" class="inline-link">Saatchi Art</a> and <a href="https://www.artmajeur.com/lya-helia" target="_blank" class="inline-link">Artmajeur</a>.</p>
-        </div>
-    </section>
+    <main>
+        <section class="page-content">
+            <h1>Shop</h1>
+            <div class="shop-content">
+                <p>Original works available for purchase. Selected pieces also offered as prints on museum-quality paper. Explore full listings in my online shops on <a href="https://www.saatchiart.com/en-id/lyahelia" target="_blank" rel="noopener" class="inline-link">Saatchi Art</a> and <a href="https://www.artmajeur.com/lya-helia" target="_blank" rel="noopener" class="inline-link">Artmajeur</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lya Helia. All rights reserved.</p>
+    </footer>
 
     <script src="../js/main.js"></script>
     <script src="../js/newsletter.js"></script>

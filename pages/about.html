@@ -12,13 +12,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Lya Helia - Abstract Artist based in Bali, exploring the dynamic changes of our time through painting and digital art.">
+    <meta name="description" content="Lya Helia is a Bali-based abstract artist working with painting and mixed media. Her work explores identity transformation and is held in private collections across the Netherlands, US, UK, Turkey, Indonesia, UAE, and Azerbaijan.">
     <title>About - Lya Helia - Abstract Artist</title>
 
     <!-- Essential Meta Tags -->
     <meta property="og:site_name" content="Lya Helia Art">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lyahelia.art/about.html">
+    <meta property="og:url" content="https://lyahelia.art/pages/about.html">
     <meta property="og:title" content="About - Lya Helia - Abstract Artist">
     <meta property="og:description" content="Learn about Bali-based abstract artist Lya Helia and her artistic journey.">
     
@@ -43,7 +43,57 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="author" content="Lya Helia">
     <meta name="keywords" content="about, abstract art, artist, Bali, contemporary art, painting, digital art, Lya Helia">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lyahelia.art/pages/about.html">
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfilePage",
+          "@id": "https://lyahelia.art/pages/about.html#webpage",
+          "url": "https://lyahelia.art/pages/about.html",
+          "name": "About Lya Helia - Abstract Artist",
+          "isPartOf": {
+            "@id": "https://lyahelia.art/#website"
+          },
+          "mainEntity": {
+            "@id": "https://lyahelia.art/#person"
+          },
+          "breadcrumb": {
+            "@id": "https://lyahelia.art/pages/about.html#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://lyahelia.art/pages/about.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://lyahelia.art/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About",
+              "item": "https://lyahelia.art/pages/about.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&family=Quattrocento:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     
@@ -55,38 +105,46 @@
     <link rel="manifest" href="../site.webmanifest">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="press.html">Press</a></li>
-            <li><a href="shop.html">Shop</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="press.html">Press</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="page-content">
-        <h1>About</h1>
-        <div class="about-container">
-            <div class="about-photo">
-                <img src="../images/about/about.jpeg" alt="Lya Helia - Artist" class="artist-portrait">
+    <main>
+        <section class="page-content">
+            <h1>About</h1>
+            <div class="about-container">
+                <div class="about-photo">
+                    <img src="../images/about/about.jpeg" alt="Lya Helia - Bali-based abstract artist portrait" class="artist-portrait">
+                </div>
+                <div class="about-text">
+                    <p>Lya Helia is a Bali-based artist working with abstract painting and mixed media. Her practice explores the transformation of identity and the possibility of rendering the metaphysical into the physical. Using a perceptual approach and color as an instrument of awareness, she treats painting as a trace of inner experience and a dialogue with the unconscious.</p>
+                    
+                    <p>Held in private collections worldwide, including the Netherlands, US, UK, Turkey, Indonesia, UAE, and Azerbaijan.</p>
+                    <ul class="pdf-links">
+                        <li><a href="../files/LH_portfolio.pdf" target="_blank" class="pdf-link">CV, Artist Statement, Portfolio</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="about-text">
-                <p>Lya Helia is a Bali-based artist working with abstract painting and mixed media. Her practice explores the transformation of identity and the possibility of rendering the metaphysical into the physical. Using a perceptual approach and color as an instrument of awareness, she treats painting as a trace of inner experience and a dialogue with the unconscious.</p>
-                
-                <p>Held in private collections worldwide, including the Netherlands, US, UK, Turkey, Indonesia, UAE, and Azerbaijan.</p>
-                <ul class="pdf-links">
-                    <li><a href="../files/LH_portfolio.pdf" target="_blank" class="pdf-link">CV, Artist Statement, Portfolio</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lya Helia. All rights reserved.</p>
+    </footer>
 
     <script src="../js/main.js"></script>
     <script src="../js/newsletter.js"></script>

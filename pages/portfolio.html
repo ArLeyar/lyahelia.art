@@ -12,13 +12,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio - Lya Helia - Abstract Artist based in Bali, exploring the dynamic changes of our time through painting and digital art.">
+    <meta name="description" content="Explore the portfolio of Lya Helia: Emotional Postcards watercolors, Etherlands mixed media series, Deconstructions AI animations, and textured abstract paintings. View collections from 2022-2025.">
     <title>Portfolio - Lya Helia - Abstract Artist</title>
 
     <!-- Essential Meta Tags -->
     <meta property="og:site_name" content="Lya Helia Art">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lyahelia.art/portfolio.html">
+    <meta property="og:url" content="https://lyahelia.art/pages/portfolio.html">
     <meta property="og:title" content="Portfolio - Lya Helia - Abstract Artist">
     <meta property="og:description" content="View the portfolio of Bali-based abstract artist Lya Helia.">
     
@@ -43,7 +43,58 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="author" content="Lya Helia">
     <meta name="keywords" content="portfolio, abstract art, artist, Bali, contemporary art, painting, digital art, Lya Helia">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lyahelia.art/pages/portfolio.html">
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://lyahelia.art/pages/portfolio.html#webpage",
+          "url": "https://lyahelia.art/pages/portfolio.html",
+          "name": "Portfolio - Lya Helia Art",
+          "description": "Explore the portfolio of Bali-based abstract artist Lya Helia, featuring series including Emotional Postcards, Etherlands, and Deconstructions.",
+          "isPartOf": {
+            "@id": "https://lyahelia.art/#website"
+          },
+          "about": {
+            "@id": "https://lyahelia.art/#person"
+          },
+          "breadcrumb": {
+            "@id": "https://lyahelia.art/pages/portfolio.html#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://lyahelia.art/pages/portfolio.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://lyahelia.art/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Portfolio",
+              "item": "https://lyahelia.art/pages/portfolio.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&family=Quattrocento:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     
@@ -55,72 +106,80 @@
     <link rel="manifest" href="../site.webmanifest">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html" class="active">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="press.html">Press</a></li>
-            <li><a href="shop.html">Shop</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="press.html">Press</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="page-content">
-        <h1>Portfolio</h1>
-        
-        <div class="portfolio-grid">
-            <a href="portfolio/emotional-postcards.html" class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="../images/portfolio/emotional-postcards-2022/1.jpg" alt="Emotional Postcards cover">
-                </div>
-                <div class="portfolio-caption">
-                    <h3>Emotional Postcards</h3>
-                </div>
-            </a>
+    <main>
+        <section class="page-content">
+            <h1>Portfolio</h1>
             
-            <!-- <a href="portfolio/symbolic-landscapes.html" class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="../images/portfolio/2. symbolic landscapes (2022)/1. welcoming (be-barmaq).jpg" alt="Symbolic Landscapes cover">
-                </div>
-                <div class="portfolio-caption">
-                    <h3>Symbolic Landscapes</h3>
-                </div>
-            </a>
-            
-            <a href="portfolio/textures.html" class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="../images/portfolio/3. textures (2022-2025)/3. healing (2022).jpeg" alt="Textures cover">
-                </div>
-                <div class="portfolio-caption">
-                    <h3>Textures</h3>
-                </div>
-            </a> -->
-            
-            <a href="portfolio/etherlands.html" class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="../images/portfolio/4. etherlands (2023-2025)/terrain ii (2023).jpeg" alt="Etherlands cover">
-                </div>
-                <div class="portfolio-caption">
-                    <h3>Etherlands</h3>
-                </div>
-            </a>
-            
-            <a href="portfolio/deconstructions.html" class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="../images/portfolio/deconstructions.jpeg" alt="Deconstructions cover">
-                </div>
-                <div class="portfolio-caption">
-                    <h3>Deconstructions</h3>
-                </div>
-            </a>
-        </div>
-    </section>
+            <div class="portfolio-grid">
+                <a href="portfolio/emotional-postcards.html" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="../images/portfolio/emotional-postcards-2022/1.jpg" alt="Emotional Postcards - watercolor abstract series by Lya Helia (2022)" loading="lazy">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h3>Emotional Postcards</h3>
+                    </div>
+                </a>
+                
+                <!-- <a href="portfolio/symbolic-landscapes.html" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="../images/portfolio/2. symbolic landscapes (2022)/1. welcoming (be-barmaq).jpg" alt="Symbolic Landscapes cover">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h3>Symbolic Landscapes</h3>
+                    </div>
+                </a>
+                
+                <a href="portfolio/textures.html" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="../images/portfolio/3. textures (2022-2025)/3. healing (2022).jpeg" alt="Textures cover">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h3>Textures</h3>
+                    </div>
+                </a> -->
+                
+                <a href="portfolio/etherlands.html" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="../images/portfolio/4. etherlands (2023-2025)/terrain ii (2023).jpeg" alt="Etherlands - mixed media series exploring cognitive patterns by Lya Helia (2023-2025)" loading="lazy">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h3>Etherlands</h3>
+                    </div>
+                </a>
+                
+                <a href="portfolio/deconstructions.html" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="../images/portfolio/deconstructions.jpeg" alt="Deconstructions - AI-assisted animation series by Lya Helia (2025)" loading="lazy">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h3>Deconstructions</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lya Helia. All rights reserved.</p>
+    </footer>
 
     <script src="../js/main.js"></script>
     <script src="../js/newsletter.js"></script>

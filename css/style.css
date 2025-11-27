@@ -1816,3 +1816,74 @@ h6 {
 #mlb2-33791224 .ml-form-successBody {
     display: none !important;
 }
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+    margin-bottom: 2rem;
+    padding: 0.75rem 0;
+}
+
+.breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '›';
+    margin: 0 0.75rem;
+    color: #999;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--medium-gray);
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .breadcrumb {
+        margin-bottom: 1.5rem;
+    }
+    
+    .breadcrumb ol {
+        font-size: 0.85rem;
+    }
+    
+    footer {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+}

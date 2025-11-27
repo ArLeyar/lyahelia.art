@@ -12,13 +12,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Press - Lya Helia - Abstract Artist based in Bali, exploring the dynamic changes of our time through painting and digital art.">
+    <meta name="description" content="Press coverage and media features about Lya Helia, Bali-based abstract artist. Includes exhibition reviews, interviews, and art publications.">
     <title>Press - Lya Helia - Abstract Artist</title>
 
     <!-- Essential Meta Tags -->
     <meta property="og:site_name" content="Lya Helia Art">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lyahelia.art/press.html">
+    <meta property="og:url" content="https://lyahelia.art/pages/press.html">
     <meta property="og:title" content="Press - Lya Helia - Abstract Artist">
     <meta property="og:description" content="Press coverage and media about Bali-based abstract artist Lya Helia.">
     
@@ -43,7 +43,55 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="author" content="Lya Helia">
     <meta name="keywords" content="press, media, abstract art, artist, Bali, contemporary art, painting, digital art, Lya Helia">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lyahelia.art/pages/press.html">
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://lyahelia.art/pages/press.html#webpage",
+          "url": "https://lyahelia.art/pages/press.html",
+          "name": "Press - Lya Helia Art",
+          "description": "Press coverage and media features about Bali-based abstract artist Lya Helia.",
+          "isPartOf": {
+            "@id": "https://lyahelia.art/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://lyahelia.art/pages/press.html#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://lyahelia.art/pages/press.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://lyahelia.art/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Press",
+              "item": "https://lyahelia.art/pages/press.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&family=Quattrocento:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     
@@ -55,34 +103,42 @@
     <link rel="manifest" href="../site.webmanifest">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="press.html" class="active">Press</a></li>
-            <li><a href="shop.html">Shop</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="press.html" class="active">Press</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="page-content">
-        <h1>Press</h1>
-        <div class="press-grid">
-            <a href="https://balinews.id/rayakan-hari-perempuan-sadik-art-brokerage-menggelar-pameran-seni/" target="_blank" class="press-item">
-                <img src="../images/press/bali_news.jpeg" alt="Bali News - The Power of She Exhibition" class="press-image">
-                <div class="press-caption">
-                    <h3>The Power of She Exhibition</h3>
-                    <p>Bali News - March 2025</p>
-                </div>
-            </a>
-        </div>
-    </section>
+    <main>
+        <section class="page-content">
+            <h1>Press</h1>
+            <div class="press-grid">
+                <a href="https://balinews.id/rayakan-hari-perempuan-sadik-art-brokerage-menggelar-pameran-seni/" target="_blank" rel="noopener" class="press-item">
+                    <img src="../images/press/bali_news.jpeg" alt="Bali News ID cover featuring Lya Helia at The Power of She Exhibition, March 2025" class="press-image" loading="lazy">
+                    <div class="press-caption">
+                        <h3>The Power of She Exhibition</h3>
+                        <p>Bali News - March 2025</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lya Helia. All rights reserved.</p>
+    </footer>
 
     <script src="../js/main.js"></script>
     <script src="../js/newsletter.js"></script>

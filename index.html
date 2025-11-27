@@ -43,7 +43,68 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="author" content="Lya Helia">
     <meta name="keywords" content="abstract art, artist, Bali, contemporary art, painting, digital art, Lya Helia">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lyahelia.art/">
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://lyahelia.art/#website",
+          "url": "https://lyahelia.art/",
+          "name": "Lya Helia Art",
+          "description": "Abstract Artist based in Bali, exploring the dynamic changes of our time through painting and digital art.",
+          "publisher": {
+            "@id": "https://lyahelia.art/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://lyahelia.art/#person",
+          "name": "Lya Helia",
+          "url": "https://lyahelia.art/",
+          "image": "https://lyahelia.art/images/about/about.jpeg",
+          "description": "Bali-based artist working with abstract painting and mixed media. Her practice explores the transformation of identity and the possibility of rendering the metaphysical into the physical.",
+          "jobTitle": "Abstract Artist",
+          "knowsAbout": ["Abstract Art", "Contemporary Art", "Mixed Media", "Painting", "Digital Art"],
+          "sameAs": [
+            "https://instagram.com/lya.helia",
+            "https://www.saatchiart.com/en-id/lyahelia",
+            "https://www.artmajeur.com/lya-helia"
+          ],
+          "email": "info@lyahelia.art",
+          "workLocation": {
+            "@type": "Place",
+            "name": "Bali, Indonesia"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://lyahelia.art/#webpage",
+          "url": "https://lyahelia.art/",
+          "name": "Lya Helia - Abstract Artist",
+          "isPartOf": {
+            "@id": "https://lyahelia.art/#website"
+          },
+          "about": {
+            "@id": "https://lyahelia.art/#person"
+          },
+          "description": "Abstract Artist based in Bali, exploring the dynamic changes of our time through painting and digital art."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://assets.mailerlite.com">
+    
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&family=Quattrocento:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     
@@ -113,7 +174,8 @@
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-    <nav class="main-nav">
+    <header>
+        <nav class="main-nav" aria-label="Main navigation">
         <div class="hamburger-menu">
             <span></span>
             <span></span>
@@ -127,9 +189,11 @@
             <li><a href="pages/press.html">Press</a></li>
             <li><a href="pages/shop.html">Shop</a></li>
         </ul>
-    </nav>
+        </nav>
+    </header>
 
-    <section id="home" class="home">
+    <main>
+        <section id="home" class="home">
         <!-- <img src="images/header/header.png" alt="Lya Helia" class="artist-signature"> -->
         <picture class="artist-signature">
             <source media="(max-width: 768px)" srcset="images/header/header-mobile-new.png">
@@ -144,7 +208,7 @@
             <div class="sales-hero">
                 <h1 class="sales-title">I make art for strong, independent humans who often feel emotionally isolated so they can reconnect with their inner world and feel truly seen.</h1>
                 <div class="artist-with-art">
-                    <img src="images/sales/me-with-art/1.jpg" alt="Lya Helia with her art" class="artist-photo">
+                    <img src="images/sales/me-with-art/1.jpg" alt="Lya Helia with her art" class="artist-photo" loading="lazy">
                 </div>
             </div>
 
@@ -156,7 +220,7 @@
                 <p>The answer came through a visual language of textured paintings, where the proven psychological impact of color meets the tactile presence of art. These works act as mirrors for emotional states. Through abstraction, layers, and textures, I found a way to give form to feelings so that they could be seen, held, and shared.</p>
                 <p>Since creating this series, with each painting as an intention and act of transformation, my life shifted profoundly. I moved from being guarded and disconnected to feeling alive, present, and rooted in deep self-worth. When you live with this art, my goal is that you also feel invited back into your own presence and reminded of your strength in sensitivity.</p>
                 <div class="artist-with-art centered">
-                    <img src="images/sales/me-with-art/2.jpeg" alt="Lya Helia with her art" class="artist-photo">
+                    <img src="images/sales/me-with-art/2.jpeg" alt="Lya Helia with her art" class="artist-photo" loading="lazy">
                 </div>
             </div>
 
@@ -172,12 +236,12 @@
             <div class="artwork-gallery">
                 <div class="artwork-grid">
                     <!-- Artwork 1: A feeling of freshly falling in love -->
-                    <div class="artwork-item">
+                    <article class="artwork-item">
                         <div class="artwork-images">
-                            <img src="images/sales/artworks/2023:a feeling of freshly falling in love/1.jpeg" alt="A feeling of freshly falling in love - main view" class="artwork-main">
+                            <img src="images/sales/artworks/2023:a feeling of freshly falling in love/1.jpeg" alt="A feeling of freshly falling in love - abstract textured painting by Lya Helia, 40x40cm mixed media on linen canvas" class="artwork-main" loading="lazy">
                             <div class="artwork-details">
-                                <img src="images/sales/artworks/2023:a feeling of freshly falling in love/2.jpeg" alt="Detail view" class="artwork-detail">
-                                <img src="images/sales/artworks/2023:a feeling of freshly falling in love/3.png" alt="Interior view" class="artwork-detail">
+                                <img src="images/sales/artworks/2023:a feeling of freshly falling in love/2.jpeg" alt="Detail view of texture and brushwork" class="artwork-detail" loading="lazy">
+                                <img src="images/sales/artworks/2023:a feeling of freshly falling in love/3.png" alt="Artwork displayed in interior setting" class="artwork-detail" loading="lazy">
                             </div>
                         </div>
                         <div class="artwork-info">
@@ -189,15 +253,15 @@
                                 <p class="price">$320</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
                     <!-- Artwork 2: Hold your center -->
-                    <div class="artwork-item">
+                    <article class="artwork-item">
                         <div class="artwork-images">
-                            <img src="images/sales/artworks/2023:hold your center/1.jpeg" alt="Hold your center - main view" class="artwork-main">
+                            <img src="images/sales/artworks/2023:hold your center/1.jpeg" alt="Hold your center - grounding abstract painting by Lya Helia, 50x50cm mixed media on linen canvas" class="artwork-main" loading="lazy">
                             <div class="artwork-details">
-                                <img src="images/sales/artworks/2023:hold your center/2.jpeg" alt="Detail view" class="artwork-detail">
-                                <img src="images/sales/artworks/2023:hold your center/interior.png" alt="Interior view" class="artwork-detail">
+                                <img src="images/sales/artworks/2023:hold your center/2.jpeg" alt="Detail view of texture and brushwork" class="artwork-detail" loading="lazy">
+                                <img src="images/sales/artworks/2023:hold your center/interior.png" alt="Artwork displayed in interior setting" class="artwork-detail" loading="lazy">
                             </div>
                         </div>
                         <div class="artwork-info">
@@ -209,15 +273,15 @@
                                 <p class="price">$350</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
                     <!-- Artwork 3: Reflection -->
-                    <div class="artwork-item">
+                    <article class="artwork-item">
                         <div class="artwork-images">
-                            <img src="images/sales/artworks/2024:reflection/1.jpeg" alt="Reflection - main view" class="artwork-main">
+                            <img src="images/sales/artworks/2024:reflection/1.jpeg" alt="Reflection - oil painting by Lya Helia exploring dialogue between past and present, 120x80cm" class="artwork-main" loading="lazy">
                             <div class="artwork-details">
-                                <img src="images/sales/artworks/2024:reflection/2.jpeg" alt="Detail view" class="artwork-detail">
-                                <img src="images/sales/artworks/2024:reflection/3.png" alt="Interior view" class="artwork-detail">
+                                <img src="images/sales/artworks/2024:reflection/2.jpeg" alt="Detail view of texture and brushwork" class="artwork-detail" loading="lazy">
+                                <img src="images/sales/artworks/2024:reflection/3.png" alt="Artwork displayed in interior setting" class="artwork-detail" loading="lazy">
                             </div>
                         </div>
                         <div class="artwork-info">
@@ -229,15 +293,15 @@
                                 <p class="price">$650</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
                     <!-- Artwork 4: Green light -->
-                    <div class="artwork-item">
+                    <article class="artwork-item">
                         <div class="artwork-images">
-                            <img src="images/sales/artworks/2025:green light/1.jpeg" alt="Green light - main view" class="artwork-main">
+                            <img src="images/sales/artworks/2025:green light/1.jpeg" alt="Green light - vibrant abstract painting celebrating Bali by Lya Helia, 60x50cm acrylic and oil pastels" class="artwork-main" loading="lazy">
                             <div class="artwork-details">
-                                <img src="images/sales/artworks/2025:green light/2.jpeg" alt="Detail view" class="artwork-detail">
-                                <img src="images/sales/artworks/2025:green light/3.png" alt="Interior view" class="artwork-detail">
+                                <img src="images/sales/artworks/2025:green light/2.jpeg" alt="Detail view of texture and brushwork" class="artwork-detail" loading="lazy">
+                                <img src="images/sales/artworks/2025:green light/3.png" alt="Artwork displayed in interior setting" class="artwork-detail" loading="lazy">
                             </div>
                         </div>
                         <div class="artwork-info">
@@ -249,15 +313,15 @@
                                 <p class="price">$400</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
                     <!-- Artwork 5: Marine fever -->
-                    <div class="artwork-item">
+                    <article class="artwork-item">
                         <div class="artwork-images">
-                            <img src="images/sales/artworks/2025:marine fever/1.jpeg" alt="Marine fever - main view" class="artwork-main">
+                            <img src="images/sales/artworks/2025:marine fever/1.jpeg" alt="Marine fever - ocean-inspired abstract painting by Lya Helia, 40x30cm acrylic and oil pastels" class="artwork-main" loading="lazy">
                             <div class="artwork-details">
-                                <img src="images/sales/artworks/2025:marine fever/2.jpeg" alt="Detail view" class="artwork-detail">
-                                <img src="images/sales/artworks/2025:marine fever/3.png" alt="Interior view" class="artwork-detail">
+                                <img src="images/sales/artworks/2025:marine fever/2.jpeg" alt="Detail view of texture and brushwork" class="artwork-detail" loading="lazy">
+                                <img src="images/sales/artworks/2025:marine fever/3.png" alt="Artwork displayed in interior setting" class="artwork-detail" loading="lazy">
                             </div>
                         </div>
                         <div class="artwork-info">
@@ -269,15 +333,15 @@
                                 <p class="price">$250</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
                     <!-- Artwork 6: Joy -->
-                    <div class="artwork-item">
+                    <article class="artwork-item">
                         <div class="artwork-images">
-                            <img src="images/sales/artworks/22025:joy/1.jpeg" alt="Joy - main view" class="artwork-main">
+                            <img src="images/sales/artworks/22025:joy/1.jpeg" alt="Joy - celebratory abstract painting by Lya Helia expressing vitality and expansion, 107x39cm mixed media" class="artwork-main" loading="lazy">
                             <div class="artwork-details">
-                                <img src="images/sales/artworks/22025:joy/2.png" alt="Detail view" class="artwork-detail">
-                                <img src="images/sales/artworks/22025:joy/3.jpg" alt="Interior view" class="artwork-detail">
+                                <img src="images/sales/artworks/22025:joy/2.png" alt="Detail view of texture and brushwork" class="artwork-detail" loading="lazy">
+                                <img src="images/sales/artworks/22025:joy/3.jpg" alt="Artwork displayed in interior setting" class="artwork-detail" loading="lazy">
                             </div>
                         </div>
                         <div class="artwork-info">
@@ -289,7 +353,7 @@
                                 <p class="price">$650</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
 
@@ -367,10 +431,10 @@
                             <div class="carousel-container">
                                 <div class="carousel-slides">
                                     <div class="carousel-slide active">
-                                        <img src="images/sales/testimonials/nigar a/1.png" alt="Nigar testimonial screenshot 1" class="carousel-image">
+                                        <img src="images/sales/testimonials/nigar a/1.png" alt="Nigar testimonial screenshot 1" class="carousel-image" loading="lazy">
                                     </div>
                                     <div class="carousel-slide">
-                                        <img src="images/sales/testimonials/nigar a/2.png" alt="Nigar testimonial screenshot 2" class="carousel-image">
+                                        <img src="images/sales/testimonials/nigar a/2.png" alt="Nigar testimonial screenshot 2" class="carousel-image" loading="lazy">
                                     </div>
                                 </div>
                                 <button class="carousel-prev" onclick="changeSlide('nigarCarousel', -1)">❮</button>
@@ -391,16 +455,16 @@
                             <div class="carousel-container">
                                 <div class="carousel-slides">
                                     <div class="carousel-slide active">
-                                        <img src="images/sales/testimonials/saint is/1.png" alt="Saint Is testimonial screenshot 1" class="carousel-image">
+                                        <img src="images/sales/testimonials/saint is/1.png" alt="Saint Is testimonial screenshot 1" class="carousel-image" loading="lazy">
                                     </div>
                                     <div class="carousel-slide">
-                                        <img src="images/sales/testimonials/saint is/2.png" alt="Saint Is testimonial screenshot 2" class="carousel-image">
+                                        <img src="images/sales/testimonials/saint is/2.png" alt="Saint Is testimonial screenshot 2" class="carousel-image" loading="lazy">
                                     </div>
                                     <div class="carousel-slide">
-                                        <img src="images/sales/testimonials/saint is/3.png" alt="Saint Is testimonial screenshot 3" class="carousel-image">
+                                        <img src="images/sales/testimonials/saint is/3.png" alt="Saint Is testimonial screenshot 3" class="carousel-image" loading="lazy">
                                     </div>
                                     <div class="carousel-slide">
-                                        <img src="images/sales/testimonials/saint is/4.png" alt="Saint Is testimonial screenshot 4" class="carousel-image">
+                                        <img src="images/sales/testimonials/saint is/4.png" alt="Saint Is testimonial screenshot 4" class="carousel-image" loading="lazy">
                                     </div>
                                 </div>
                                 <button class="carousel-prev" onclick="changeSlide('saintCarousel', -1)">❮</button>
@@ -433,7 +497,7 @@
             <div class="newsletter-section">
                 <div class="newsletter-content">
                     <div class="newsletter-portrait">
-                        <img src="images/portrait.jpg" alt="Lya Helia" class="portrait-image">
+                        <img src="images/portrait.jpg" alt="Lya Helia portrait - Bali-based abstract artist" class="portrait-image" loading="lazy">
                     </div>
                     <div class="newsletter-text-content">
                         <h2 class="newsletter-title">Stay Connected</h2>
@@ -496,8 +560,13 @@
             </div>
         </div>
     </section>
+    </main>
 
-    <div id="lightbox" class="lightbox">
+    <footer>
+        <p>&copy; 2025 Lya Helia. All rights reserved.</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="Image lightbox">
         <span class="close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>

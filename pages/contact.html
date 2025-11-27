@@ -12,13 +12,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact - Lya Helia - Abstract Artist based in Bali, exploring the dynamic changes of our time through painting and digital art.">
+    <meta name="description" content="Contact Lya Helia for art commissions, collaborations, and exhibition projects. Open to painting, installation, and video work centered on material sensitivity and cognitive patterning.">
     <title>Contact - Lya Helia - Abstract Artist</title>
 
     <!-- Essential Meta Tags -->
     <meta property="og:site_name" content="Lya Helia Art">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lyahelia.art/contact.html">
+    <meta property="og:url" content="https://lyahelia.art/pages/contact.html">
     <meta property="og:title" content="Contact - Lya Helia - Abstract Artist">
     <meta property="og:description" content="Get in touch with Bali-based abstract artist Lya Helia.">
     
@@ -43,7 +43,55 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="author" content="Lya Helia">
     <meta name="keywords" content="contact, abstract art, artist, Bali, contemporary art, painting, digital art, Lya Helia">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lyahelia.art/pages/contact.html">
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ContactPage",
+          "@id": "https://lyahelia.art/pages/contact.html#webpage",
+          "url": "https://lyahelia.art/pages/contact.html",
+          "name": "Contact Lya Helia",
+          "description": "Get in touch with Bali-based abstract artist Lya Helia for commissions, collaborations, and exhibition projects.",
+          "isPartOf": {
+            "@id": "https://lyahelia.art/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://lyahelia.art/pages/contact.html#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://lyahelia.art/pages/contact.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://lyahelia.art/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Contact",
+              "item": "https://lyahelia.art/pages/contact.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&family=Quattrocento:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     
@@ -55,51 +103,59 @@
     <link rel="manifest" href="../site.webmanifest">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-            <li><a href="press.html">Press</a></li>
-            <li><a href="shop.html">Shop</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="press.html">Press</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="page-content">
-        <h1>Contact</h1>
-        <div class="about-container">
-            <div class="about-photo">
-                <img src="../images/contact/contact.jpeg" alt="Lya Helia - Contact" class="artist-portrait">
+    <main>
+        <section class="page-content">
+            <h1>Contact</h1>
+            <div class="about-container">
+                <div class="about-photo">
+                    <img src="../images/contact/contact.jpeg" alt="Lya Helia in her studio - available for commissions and collaborations" class="artist-portrait">
+                </div>
+                <div class="about-text">
+                    <p>I'm open to commissions, collaborations, and exhibition projects. My practice spans painting, installation, and video—centered on material sensitivity and cognitive patterning. Let's build something resonant together.</p>
+                    
+                    <ul class="pdf-links">
+                        <li><a href="mailto:info@lyahelia.art" class="pdf-link contact-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            info@lyahelia.art
+                        </a></li>
+                        <li><a href="https://instagram.com/lya.helia" target="_blank" rel="noopener" class="pdf-link contact-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="m16 11.37a4 4 0 1 1-7.914-1.004A4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            @lya.helia
+                        </a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="about-text">
-                <p>I'm open to commissions, collaborations, and exhibition projects. My practice spans painting, installation, and video—centered on material sensitivity and cognitive patterning. Let's build something resonant together.</p>
-                
-                <ul class="pdf-links">
-                    <li><a href="mailto:info@lyahelia.art" class="pdf-link contact-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        info@lyahelia.art
-                    </a></li>
-                    <li><a href="https://instagram.com/lya.helia" target="_blank" class="pdf-link contact-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
-                            <path d="m16 11.37a4 4 0 1 1-7.914-1.004A4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        @lya.helia
-                    </a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lya Helia. All rights reserved.</p>
+    </footer>
 
     <script src="../js/main.js"></script>
     <script src="../js/newsletter.js"></script>

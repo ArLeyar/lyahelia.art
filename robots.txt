@@ -1,0 +1,14 @@
+# robots.txt for lyahelia.art
+# Lya Helia - Abstract Artist Portfolio
+
+User-agent: *
+Allow: /
+
+# Disallow development/script directories
+Disallow: /scripts/
+Disallow: /website/
+
+# Sitemap location
+Sitemap: https://lyahelia.art/sitemap.xml
+
+
