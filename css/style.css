@@ -614,7 +614,7 @@ h6 {
 /* Sales Page Styles */
 .sales-section {
     background-color: var(--background-color);
-    padding: 6rem 0;
+    padding: 6rem 0 1rem;
 }
 
 .sales-hero {
@@ -1240,7 +1240,7 @@ h6 {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 16px;
     padding: 5rem 3rem;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
 }
@@ -1375,7 +1375,7 @@ h6 {
 .site-footer {
     background-color: var(--background-color);
     padding: 2rem 0 0;
-    margin-top: 4rem;
+    margin-top: 1rem;
 }
 
 .site-footer .newsletter-section {
@@ -1462,7 +1462,7 @@ h6 {
     }
 
     .sales-section {
-        padding: 3rem 0;
+        padding: 3rem 0 1rem;
     }
 
     .philosophy-section,
@@ -1471,9 +1471,12 @@ h6 {
     .purchase-steps,
     .bonuses-section,
     .testimonials-section,
-    .final-cta,
-    .newsletter-section {
+    .final-cta {
         margin-bottom: 4rem;
+    }
+    
+    .newsletter-section {
+        margin-bottom: 1.5rem;
     }
 
     .limited-release,
@@ -1863,7 +1866,7 @@ h6 {
 footer {
     text-align: center;
     padding: 2rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     border-top: 1px solid var(--medium-gray);
     color: #666;
     font-size: 0.9rem;
@@ -1884,6 +1887,6 @@ footer p {
     
     footer {
         padding: 1.5rem;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 }
