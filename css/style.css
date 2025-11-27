@@ -999,24 +999,36 @@ h6 {
     color: var(--text-color);
 }
 
-.a4-works {
+.prints-gallery {
+    margin-bottom: 2rem;
+}
+
+.prints-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.prints-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+.prints-description {
     background-color: var(--light-gray);
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 16px;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
-.a4-works h4 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #101010;
-}
-
-.a4-works p {
+.prints-description p {
     font-size: 1rem;
     line-height: 1.7;
     color: var(--text-color);
+    margin: 0;
 }
 
 .shipping-note {
@@ -1453,6 +1465,10 @@ h6 {
 
     .subscribe-button {
         width: 100%;
+    }
+
+    .prints-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
