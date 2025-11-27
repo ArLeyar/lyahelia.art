@@ -130,57 +130,6 @@
     </image:image>
   </url>
 
-  <!-- Portfolio: Symbolic Landscapes -->
-  <url>
-    <loc>https://lyahelia.art/pages/portfolio/symbolic-landscapes.html</loc>
-    <lastmod>2025-11-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://lyahelia.art/images/portfolio/2.%20symbolic%20landscapes%20(2022)/1.%20welcoming%20(be-barmaq).jpg</image:loc>
-      <image:title>Symbolic Landscapes - Welcoming (Beşbarmaq)</image:title>
-      <image:caption>Analog collage inspired by Azerbaijan landscape by Lya Helia (2022)</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://lyahelia.art/images/portfolio/2.%20symbolic%20landscapes%20(2022)/2.%20feels%20like%20summer%20(batabat).jpg</image:loc>
-      <image:title>Symbolic Landscapes - Feels Like Summer (Batabat)</image:title>
-      <image:caption>Analog collage by Lya Helia (2022)</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://lyahelia.art/images/portfolio/2.%20symbolic%20landscapes%20(2022)/3.%20and%20all%20that%20jazz%20(bakuvian%20night).jpg</image:loc>
-      <image:title>Symbolic Landscapes - And All That Jazz (Bakuvian Night)</image:title>
-      <image:caption>Analog collage by Lya Helia (2022)</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Portfolio: Textures -->
-  <url>
-    <loc>https://lyahelia.art/pages/portfolio/textures.html</loc>
-    <lastmod>2025-11-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://lyahelia.art/images/portfolio/3.%20textures%20(2022-2025)/3.%20healing%20(2022).jpeg</image:loc>
-      <image:title>Textures - Healing (2022)</image:title>
-      <image:caption>Textured abstract painting by Lya Helia</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://lyahelia.art/images/portfolio/3.%20textures%20(2022-2025)/5.%20a%20feeling%20of%20freshly%20falling%20in%20love%20(2023).jpeg</image:loc>
-      <image:title>Textures - A Feeling of Freshly Falling in Love (2023)</image:title>
-      <image:caption>Textured abstract painting by Lya Helia</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://lyahelia.art/images/portfolio/3.%20textures%20(2022-2025)/8.%20green%20light%20(2025).jpeg</image:loc>
-      <image:title>Textures - Green Light (2025)</image:title>
-      <image:caption>Vibrant textured painting by Lya Helia</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://lyahelia.art/images/portfolio/3.%20textures%20(2022-2025)/9.%20joy%20(2025).jpeg</image:loc>
-      <image:title>Textures - Joy (2025)</image:title>
-      <image:caption>Celebratory textured painting by Lya Helia</image:caption>
-    </image:image>
-  </url>
-
   <!-- Contact Page -->
   <url>
     <loc>https://lyahelia.art/pages/contact.html</loc>
