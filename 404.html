@@ -12,9 +12,23 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - Return to Lya Helia Art to explore abstract paintings and mixed media artwork.">
+    <meta name="robots" content="noindex, follow">
     <title>Page Not Found - Lya Helia Art</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&family=Quattrocento:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+    
     <style>
         body {
             font-family: 'Quattrocento', serif;
@@ -55,77 +69,12 @@
         }
         
         @media (max-width: 768px) {
-            .main-nav {
-                padding: 0;
-                position: relative;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-            
-            .hamburger-menu {
-                display: block;
-                cursor: pointer;
-                padding: 15px;
-                z-index: 100;
-                position: absolute;
-                right: 10px;
-                top: 10px;
-            }
-            
-            .hamburger-menu span {
-                display: block;
-                width: 25px;
-                height: 3px;
-                background-color: #333;
-                margin-bottom: 5px;
-                transition: all 0.3s ease;
-            }
-            
-            .main-nav ul {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                padding: 60px 0 20px;
-                background-color: white;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 90;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            }
-            
-            .main-nav.active ul {
-                display: flex;
-            }
-            
-            .main-nav li {
-                margin: 0.5rem 0;
-                text-align: center;
-            }
-            
-            .main-nav a {
-                font-size: 0.9rem;
-                padding: 0.5rem 1rem;
-                display: block;
-            }
-            
-            .hamburger-menu.active span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-            
-            .hamburger-menu.active span:nth-child(2) {
-                opacity: 0;
-            }
-            
-            .hamburger-menu.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -7px);
+            body {
+                padding-top: 100px;
             }
         }
         
         @media (max-width: 480px) {
-            .main-nav a {
-                font-size: 0.85rem;
-            }
-            
             body {
                 padding-top: 80px;
             }
@@ -133,8 +82,10 @@
     </style>
 </head>
 <body>
-    <h1>Page Not Found</h1>
-    <p>The page you are looking for doesn't exist.</p>
-    <p>Return to the <a href="/">homepage</a>.</p>
+    <main>
+        <h1>Page Not Found</h1>
+        <p>The page you are looking for doesn't exist.</p>
+        <p>Return to the <a href="/">homepage</a>.</p>
+    </main>
 </body>
-</html> 
+</html>

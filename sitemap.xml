@@ -10,11 +10,18 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://lyahelia.art/images/header/header-desktop-new.png</image:loc>
-      <image:title>Lya Helia - Abstract Artist</image:title>
+      <image:title>Lya Helia - Abstract Artist Header</image:title>
+      <image:caption>Lya Helia signature artwork header image</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://lyahelia.art/images/portrait.jpg</image:loc>
       <image:title>Lya Helia Portrait</image:title>
+      <image:caption>Portrait of Bali-based abstract artist Lya Helia</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/sales/me-with-art/1.jpg</image:loc>
+      <image:title>Lya Helia with her artwork</image:title>
+      <image:caption>Artist Lya Helia presenting her abstract paintings</image:caption>
     </image:image>
   </url>
 
@@ -27,6 +34,7 @@
     <image:image>
       <image:loc>https://lyahelia.art/images/about/about.jpeg</image:loc>
       <image:title>Lya Helia - Artist Portrait</image:title>
+      <image:caption>Bali-based abstract artist Lya Helia</image:caption>
     </image:image>
   </url>
 
@@ -36,6 +44,21 @@
     <lastmod>2025-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/emotional-postcards-2022/1.jpg</image:loc>
+      <image:title>Emotional Postcards Series Cover</image:title>
+      <image:caption>Watercolor abstract series by Lya Helia (2022)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/4.%20etherlands%20(2023-2025)/terrain%20ii%20(2023).jpeg</image:loc>
+      <image:title>Etherlands Series Cover</image:title>
+      <image:caption>Mixed media series exploring cognitive patterns by Lya Helia</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/deconstructions.jpeg</image:loc>
+      <image:title>Deconstructions Series Cover</image:title>
+      <image:caption>AI-assisted animation series by Lya Helia (2025)</image:caption>
+    </image:image>
   </url>
 
   <!-- Portfolio: Emotional Postcards -->
@@ -46,7 +69,18 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://lyahelia.art/images/portfolio/emotional-postcards-2022/1.jpg</image:loc>
-      <image:title>Emotional Postcards Series by Lya Helia</image:title>
+      <image:title>Emotional Postcards #1</image:title>
+      <image:caption>Watercolor abstract by Lya Helia (2022)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/emotional-postcards-2022/5.jpg</image:loc>
+      <image:title>Emotional Postcards #5</image:title>
+      <image:caption>Watercolor abstract by Lya Helia (2022)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/emotional-postcards-2022/10.jpg</image:loc>
+      <image:title>Emotional Postcards #10</image:title>
+      <image:caption>Watercolor abstract by Lya Helia (2022)</image:caption>
     </image:image>
   </url>
 
@@ -58,15 +92,28 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://lyahelia.art/images/portfolio/4.%20etherlands%20(2023-2025)/terrain%20i%20(2023).jpeg</image:loc>
-      <image:title>Etherlands - Terrain I (2023) by Lya Helia</image:title>
+      <image:title>Etherlands - Terrain I (2023)</image:title>
+      <image:caption>Mixed media landscape from the Etherlands series by Lya Helia</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://lyahelia.art/images/portfolio/4.%20etherlands%20(2023-2025)/dweller%20i%20(2024).jpeg</image:loc>
-      <image:title>Etherlands - Dweller I (2024) by Lya Helia</image:title>
+      <image:title>Etherlands - Dweller I (2024)</image:title>
+      <image:caption>Figure from the Etherlands series by Lya Helia</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://lyahelia.art/images/portfolio/4.%20etherlands%20(2023-2025)/anomaly%20i%20(2024).jpeg</image:loc>
-      <image:title>Etherlands - Anomaly I (2024) by Lya Helia</image:title>
+      <image:title>Etherlands - Anomaly I (2024)</image:title>
+      <image:caption>Abstract anomaly from the Etherlands series by Lya Helia</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/4.%20etherlands%20(2023-2025)/transmission%20i%20(2024).jpeg</image:loc>
+      <image:title>Etherlands - Transmission I (2024)</image:title>
+      <image:caption>Mixed media transmission from the Etherlands series by Lya Helia</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/4.%20etherlands%20(2023-2025)/terrain%20ii%20(2023).jpeg</image:loc>
+      <image:title>Etherlands - Terrain II (2023)</image:title>
+      <image:caption>Mixed media landscape from the Etherlands series by Lya Helia</image:caption>
     </image:image>
   </url>
 
@@ -78,7 +125,8 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://lyahelia.art/images/portfolio/deconstructions.jpeg</image:loc>
-      <image:title>Deconstructions Series by Lya Helia</image:title>
+      <image:title>Deconstructions Series</image:title>
+      <image:caption>AI-assisted animation series based on ink sketches by Lya Helia (2025)</image:caption>
     </image:image>
   </url>
 
@@ -90,7 +138,18 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://lyahelia.art/images/portfolio/2.%20symbolic%20landscapes%20(2022)/1.%20welcoming%20(be-barmaq).jpg</image:loc>
-      <image:title>Symbolic Landscapes - Welcoming by Lya Helia</image:title>
+      <image:title>Symbolic Landscapes - Welcoming (Beşbarmaq)</image:title>
+      <image:caption>Analog collage inspired by Azerbaijan landscape by Lya Helia (2022)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/2.%20symbolic%20landscapes%20(2022)/2.%20feels%20like%20summer%20(batabat).jpg</image:loc>
+      <image:title>Symbolic Landscapes - Feels Like Summer (Batabat)</image:title>
+      <image:caption>Analog collage by Lya Helia (2022)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/2.%20symbolic%20landscapes%20(2022)/3.%20and%20all%20that%20jazz%20(bakuvian%20night).jpg</image:loc>
+      <image:title>Symbolic Landscapes - And All That Jazz (Bakuvian Night)</image:title>
+      <image:caption>Analog collage by Lya Helia (2022)</image:caption>
     </image:image>
   </url>
 
@@ -102,7 +161,23 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://lyahelia.art/images/portfolio/3.%20textures%20(2022-2025)/3.%20healing%20(2022).jpeg</image:loc>
-      <image:title>Textures - Healing (2022) by Lya Helia</image:title>
+      <image:title>Textures - Healing (2022)</image:title>
+      <image:caption>Textured abstract painting by Lya Helia</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/3.%20textures%20(2022-2025)/5.%20a%20feeling%20of%20freshly%20falling%20in%20love%20(2023).jpeg</image:loc>
+      <image:title>Textures - A Feeling of Freshly Falling in Love (2023)</image:title>
+      <image:caption>Textured abstract painting by Lya Helia</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/3.%20textures%20(2022-2025)/8.%20green%20light%20(2025).jpeg</image:loc>
+      <image:title>Textures - Green Light (2025)</image:title>
+      <image:caption>Vibrant textured painting by Lya Helia</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyahelia.art/images/portfolio/3.%20textures%20(2022-2025)/9.%20joy%20(2025).jpeg</image:loc>
+      <image:title>Textures - Joy (2025)</image:title>
+      <image:caption>Celebratory textured painting by Lya Helia</image:caption>
     </image:image>
   </url>
 
@@ -115,6 +190,7 @@
     <image:image>
       <image:loc>https://lyahelia.art/images/contact/contact.jpeg</image:loc>
       <image:title>Contact Lya Helia</image:title>
+      <image:caption>Lya Helia - available for commissions and collaborations</image:caption>
     </image:image>
   </url>
 
@@ -127,6 +203,7 @@
     <image:image>
       <image:loc>https://lyahelia.art/images/press/bali_news.jpeg</image:loc>
       <image:title>Lya Helia Press Coverage - Bali News</image:title>
+      <image:caption>The Power of She Exhibition coverage featuring Lya Helia</image:caption>
     </image:image>
   </url>
 
@@ -139,5 +216,3 @@
   </url>
 
 </urlset>
-
-
