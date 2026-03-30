@@ -257,9 +257,26 @@ h6 {
 /* Press page styles */
 .press-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
     margin-top: 2rem;
+}
+
+.press-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.press-row-label {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    letter-spacing: 0.03em;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0.5rem;
 }
 
 .press-item {
@@ -277,6 +294,13 @@ h6 {
     height: 300px;
     object-fit: cover;
     margin-bottom: 1rem;
+}
+
+.press-image--logo {
+    object-fit: contain;
+    background: #f5f5f5;
+    padding: 2rem;
+    height: 200px;
 }
 
 .press-caption {
@@ -577,7 +601,11 @@ h6 {
         text-align: left;
     }
 
+<<<<<<< HEAD
     .press-grid {
+=======
+    .press-row {
+>>>>>>> 44e9372 (Add press coverage for Magic of Colours and The Myth exhibitions)
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
