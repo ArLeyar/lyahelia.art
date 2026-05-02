@@ -601,11 +601,7 @@ h6 {
         text-align: left;
     }
 
-<<<<<<< HEAD
-    .press-grid {
-=======
     .press-row {
->>>>>>> 44e9372 (Add press coverage for Magic of Colours and The Myth exhibitions)
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
