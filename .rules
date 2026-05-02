@@ -1,0 +1,40 @@
+# Zed Agent Rules for lyahelia.art
+
+This is a static GitHub Pages website.
+
+## Start / Preview
+
+Never open `index.html` directly.
+Never use `file://`.
+Never say this site can be opened directly without a server.
+
+To preview the site, run this from the repository root:
+
+```sh
+python3 -m http.server 5173 --bind 127.0.0.1
+```
+
+Then open this URL:
+
+```text
+http://127.0.0.1:5173
+```
+
+In Zed, prefer the project task named:
+
+```text
+Start site
+```
+
+## Project Shape
+
+- Static HTML/CSS/JS site.
+- No npm install is needed.
+- No React/Vite/build step is needed.
+- Main files: `index.html`, `css/style.css`, `js/main.js`, `pages/`, `images/`, `video/`.
+
+## Editing
+
+- Keep edits focused.
+- Do not auto-format unrelated HTML/CSS.
+- Preserve existing URLs, image paths, and page paths unless explicitly asked.

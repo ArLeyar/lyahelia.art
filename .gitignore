@@ -2,3 +2,4 @@
 .venv
 website
 .playwright-mcp
+.zed/
